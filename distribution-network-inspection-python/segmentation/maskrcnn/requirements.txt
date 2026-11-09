@@ -1,0 +1,7 @@
+# Tested environment: G:/anaconda/envs/yolo12-common/python.exe
+# Install the matching CUDA wheel pair before the remaining packages when creating a new environment.
+torch==2.7.1
+torchvision==0.22.1
+numpy==1.26.4
+Pillow>=10,<12
+pycocotools>=2.0.7,<3

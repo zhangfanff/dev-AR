@@ -1,0 +1,7 @@
+path: H:/dataset_tower/peiwang_no5910_v4
+train: images/train
+val: images/val
+test: images/test
+nc: 1
+names:
+- tower

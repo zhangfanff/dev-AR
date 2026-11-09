@@ -1,0 +1,7 @@
+numpy
+scipy
+Pillow
+pycocotools
+matplotlib
+# tkinter is bundled with the current Windows Python environment.
+# torch and rfdetr are optional for cached-mask evaluation; only needed to create missing predictions.

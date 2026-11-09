@@ -1,0 +1,11 @@
+path: H:/datasets/tower-top-addlightimg-addlightimg-4class-addshiqu-add60-addblanktowertop-adddouble
+train: images/train
+val: images/val
+test: images/test
+nc: 5
+names:
+- tower-top
+- hengdan
+- jinggai
+- car
+- byq

@@ -1,0 +1,10 @@
+numpy
+scipy
+Pillow
+pycocotools
+matplotlib
+opencv-python
+PyYAML
+onnx
+onnxruntime
+# Training environments are separate; consult each model's requirements.

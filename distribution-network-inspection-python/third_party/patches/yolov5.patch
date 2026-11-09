@@ -1,0 +1,27 @@
+--- a/train.py
++++ b/train.py
+@@ -258,6 +258,12 @@
+                 f"Logging results to {colorstr('bold', save_dir)}\n"
+                 f'Starting training for {epochs} epochs...')
+     for epoch in range(start_epoch, epochs):  # epoch ------------------------------------------------------------------
++        # PAPER_BASELINE_CLOSE_MOSAIC
++        if int(hyp.get('close_mosaic', 0)) > 0 and epoch == max(epochs - int(hyp['close_mosaic']), 0):
++            dataset.mosaic = False
++            # Recreate workers so they receive the updated dataset policy.
++            if hasattr(train_loader, 'iterator'):
++                train_loader.iterator = torch.utils.data.DataLoader.__iter__(train_loader)
+         callbacks.run('on_train_epoch_start')
+         model.train()
+ 
+--- a/utils/dataloaders.py
++++ b/utils/dataloaders.py
+@@ -718,6 +718,9 @@
+             labels_out[:, 1:] = torch.from_numpy(labels)
+ 
+         # Convert
++        # PAPER_BASELINE_BGR
++        if self.augment and random.random() < hyp.get('bgr', 0.0):
++            img = img[..., ::-1]
+         img = img.transpose((2, 0, 1))[::-1]  # HWC to CHW, BGR to RGB
+         img = np.ascontiguousarray(img)
+ 

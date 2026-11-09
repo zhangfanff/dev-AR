@@ -1,0 +1,9 @@
+Third-party model sources are restored from the repositories and commits in dependencies.json.
+YOLOv12: https://github.com/sunsmarterjie/yolov12
+YOLOv5: https://github.com/ultralytics/yolov5
+YOLACT: https://github.com/dbolya/yolact
+RF-DETR: https://github.com/roboflow/rf-detr
+Torchvision: https://github.com/pytorch/vision
+
+Original copyright notices and license terms remain applicable to restored sources and patches.
+Project-specific adaptations are distributed as diffs, not as a claim of original authorship of the model frameworks.

@@ -1,0 +1,7 @@
+{
+  "H:/datasets/LineDatasetFull": "/path/to/wire_dataset",
+  "I:/datasets/LineDatasetFull": "/path/to/wire_dataset",
+  "I:/datasets/LineDataset": "/path/to/local_wire_source",
+  "H:/dataset_tower/peiwang_no5910_v4": "/path/to/tower_dataset",
+  "H:/datasets/tower-top-addlightimg-addlightimg-4class-addshiqu-add60-addblanktowertop-adddouble": "/path/to/tower_top_dataset"
+}

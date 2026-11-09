@@ -1,0 +1,6 @@
+# Extra imports needed by original YOLOv5 v7.0 in the existing yolo12-common environment.
+# Keep the existing matching torch / torchvision / CUDA installation.
+gitpython
+ipython
+seaborn
+tensorboard

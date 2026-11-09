@@ -1,0 +1,49 @@
+{
+  "dataset_root": "datasets/wire",
+  "splits": {
+    "train": {
+      "annotations": "train.json",
+      "images": "spliting_imgs/train"
+    },
+    "val": {
+      "annotations": "val.json",
+      "images": "spliting_imgs/val"
+    },
+    "test": {
+      "annotations": "test.json",
+      "images": "spliting_imgs/test"
+    }
+  },
+  "model": {
+    "architecture": "maskrcnn_resnet50_fpn",
+    "input_size": 700,
+    "trainable_backbone_layers": 3,
+    "nms_threshold": 0.5
+  },
+  "training": {
+    "epochs": 30,
+    "batch_size": 1,
+    "accumulation_steps": 4,
+    "workers": 0,
+    "learning_rate": 0.005,
+    "momentum": 0.9,
+    "weight_decay": 0.0005,
+    "lr_milestones": [
+      20,
+      27
+    ],
+    "lr_gamma": 0.1,
+    "warmup_steps": 250,
+    "horizontal_flip_probability": 0.5,
+    "amp": true,
+    "amp_initial_scale": 4096.0,
+    "seed": 42,
+    "initialization": "COCO_V1",
+    "selection_metric": "val_mask_AP"
+  },
+  "evaluation": {
+    "score_threshold": 0.3,
+    "mask_threshold": 0.5,
+    "max_detections": 100
+  }
+}

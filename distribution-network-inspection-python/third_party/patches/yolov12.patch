@@ -1,0 +1,69 @@
+--- a/ultralytics/cfg/__init__.py
++++ b/ultralytics/cfg/__init__.py
+@@ -6,6 +6,7 @@
+ from pathlib import Path
+ from types import SimpleNamespace
+ from typing import Dict, List, Union
++
+ 
+ import cv2
+ 
+--- a/ultralytics/cfg/models/v12/yolov12.yaml
++++ b/ultralytics/cfg/models/v12/yolov12.yaml
+@@ -3,7 +3,7 @@
+ # CFG file for YOLOv12-turbo
+ 
+ # Parameters
+-nc: 80 # number of classes
++nc: 1 # number of classes
+ scales: # model compound scaling constants, i.e. 'model=yolov12n.yaml' will call yolov12.yaml with scale 'n'
+   # [depth, width, max_channels]
+   n: [0.50, 0.25, 1024] # summary: 497 layers, 2,553,904 parameters, 2,553,888 gradients, 6.2 GFLOPs
+--- a/ultralytics/data/augment.py
++++ b/ultralytics/data/augment.py
+@@ -2055,7 +2055,7 @@
+                 )
+             labels["masks"] = masks
+         labels["img"] = self._format_img(img)
+-        labels["cls"] = torch.from_numpy(cls) if nl else torch.zeros(nl, 1)
++        labels["cls"] = torch.from_numpy(cls) if nl else torch.zeros(nl)
+         labels["bboxes"] = torch.from_numpy(instances.bboxes) if nl else torch.zeros((nl, 4))
+         if self.return_keypoint:
+             labels["keypoints"] = torch.from_numpy(instances.keypoints)
+--- a/ultralytics/nn/modules/block.py
++++ b/ultralytics/nn/modules/block.py
+@@ -238,6 +238,13 @@
+         y = list(self.cv1(x).chunk(2, 1))
+         y.extend(m(y[-1]) for m in self.m)
+         return self.cv2(torch.cat(y, 1))
++        # 以下5行代码用于安卓部署
++        # x = self.cv1(x)
++        # x = [x, x[:, self.c:, ...]]
++        # x.extend(m(x[-1]) for m in self.m)
++        # x.pop(1)
++        # tmp=self.cv2(torch.cat(x, 1))
++        # return self.cv2(torch.cat(x, 1))
+ 
+     def forward_split(self, x):
+         """Forward pass using split() instead of chunk()."""
+--- a/ultralytics/nn/modules/head.py
++++ b/ultralytics/nn/modules/head.py
+@@ -72,6 +72,9 @@
+             return x
+         y = self._inference(x)
+         return y if self.export else (y, x)
++        # # # 以下2行代码用于安卓部署
++        # shape = x[0].shape
++        # return torch.cat([xi.view(shape[0], self.no, -1) for xi in x], 2).permute(0, 2, 1)
+ 
+     def forward_end2end(self, x):
+         """
+@@ -129,6 +132,8 @@
+             dbox = self.decode_bboxes(self.dfl(box), self.anchors.unsqueeze(0)) * self.strides
+ 
+         return torch.cat((dbox, cls.sigmoid()), 1)
++        # 以下1行代码用于安卓部署
++        # return x_cat.permute(0, 2, 1)
+ 
+     def bias_init(self):
+         """Initialize Detect() biases, WARNING: requires stride availability."""
