@@ -1,0 +1,349 @@
+{
+  "source": "G:\\pythonProjects\\yolov12-main\\runs\\detect\\train9\\weights\\best.pt",
+  "source_pt_sha256": "6c2e11626e65247694de5a0c458810fb6c6880eaa69fd22d7a7f31d1bbcf45ac",
+  "architecture": "YOLOv8n",
+  "yolo_sizes": [
+    640,
+    1280
+  ],
+  "ocr_versions": [
+    "V4",
+    "V6_TINY",
+    "V5_MOBILE",
+    "V5_SERVER",
+    "V6_SMALL",
+    "ML_KIT_CHINESE",
+    "DBNET_CRNN"
+  ],
+  "models": {
+    "ch_PP-OCRv4_det_infer.onnx": {
+      "sha256": "d2a7720d45a54257208b1e13e36a8479894cb74155a5efe29462512d42f49da9",
+      "bytes": 4745517,
+      "inputs": {
+        "x": [
+          "p2o.DynamicDimension.0",
+          3,
+          "p2o.DynamicDimension.1",
+          "p2o.DynamicDimension.2"
+        ]
+      },
+      "outputs": {
+        "sigmoid_0.tmp_0": [
+          "p2o.DynamicDimension.3",
+          1,
+          "p2o.DynamicDimension.4",
+          "p2o.DynamicDimension.5"
+        ]
+      }
+    },
+    "ch_PP-OCRv4_rec_infer.onnx": {
+      "sha256": "48fc40f24f6d2a207a2b1091d3437eb3cc3eb6b676dc3ef9c37384005483683b",
+      "bytes": 10857958,
+      "inputs": {
+        "x": [
+          "p2o.DynamicDimension.0",
+          3,
+          "?",
+          "p2o.DynamicDimension.1"
+        ]
+      },
+      "outputs": {
+        "softmax_11.tmp_0": [
+          "p2o.DynamicDimension.2",
+          "p2o.DynamicDimension.3",
+          6625
+        ]
+      }
+    },
+    "ch_ppocr_mobile_v2.0_cls_infer.onnx": {
+      "sha256": "e47acedf663230f8863ff1ab0e64dd2d82b838fceb5957146dab185a89d6215c",
+      "bytes": 585532,
+      "inputs": {
+        "x": [
+          null,
+          3,
+          "?",
+          "?"
+        ]
+      },
+      "outputs": {
+        "save_infer_model/scale_0.tmp_1": [
+          null,
+          2
+        ]
+      }
+    },
+    "knob_1280.onnx": {
+      "sha256": "c769cfcd250cc69c77c60a27dc1437588dfb48b08dfd11f9a297d92d66dcb0fe",
+      "bytes": 12742692,
+      "inputs": {
+        "images": [
+          1,
+          3,
+          1280,
+          1280
+        ]
+      },
+      "outputs": {
+        "output0": [
+          1,
+          5,
+          33600
+        ]
+      }
+    },
+    "knob_640.onnx": {
+      "sha256": "e4166b19706605689b19f18c3793040c48e3ba2f3e0f5a52d597a268fe54e0e2",
+      "bytes": 12238686,
+      "inputs": {
+        "images": [
+          1,
+          3,
+          640,
+          640
+        ]
+      },
+      "outputs": {
+        "output0": [
+          1,
+          5,
+          8400
+        ]
+      }
+    },
+    "PP-OCRv6_det_tiny.onnx": {
+      "sha256": "f42c0fbd294d95eac1a550e131b277dac97462c8025fa4b6c3cec1b7894bd3d5",
+      "bytes": 1829618,
+      "inputs": {
+        "x": [
+          "DynamicDimension.0",
+          3,
+          "DynamicDimension.1",
+          "DynamicDimension.2"
+        ]
+      },
+      "outputs": {
+        "fetch_name_0": [
+          "ConvTranspose_459_o0__d0",
+          1,
+          "ConvTranspose_459_o0__d2",
+          "ConvTranspose_459_o0__d3"
+        ]
+      }
+    },
+    "PP-OCRv6_rec_tiny.onnx": {
+      "sha256": "e16e242de5937ad92609223f19bc2aff3727ee40b095f996907c24749bad251b",
+      "bytes": 4489813,
+      "inputs": {
+        "x": [
+          "DynamicDimension.0",
+          3,
+          48,
+          "DynamicDimension.1"
+        ]
+      },
+      "outputs": {
+        "fetch_name_0": [
+          "DynamicDimension.0",
+          "floor(floor(floor(DynamicDimension.1/2 - 1/2)/2)/2 - 1/2) + 1",
+          6906
+        ]
+      }
+    },
+    "rec_character_dict.txt": {
+      "sha256": "d917d7489d2c20d2e4cee8c17068f8ac54f6ee406a04bf5ac3b1ff5dc38e1e52",
+      "bytes": 32871,
+      "dictionary_classes_with_blank_and_space": 6625
+    },
+    "rec_character_dict_v6_tiny.txt": {
+      "sha256": "270d23d30806cfefd0b10dde0f15fe80cb5895615225e824cfa56ea8ba5d9c0f",
+      "bytes": 34058,
+      "dictionary_classes_with_blank_and_space": 6906
+    },
+    "hand_landmarker.task": {
+      "url": "https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task",
+      "sha256": "fbc2a30080c3c557093b5ddfc334698132eb341044ccee322ccf8bcf3607cde1",
+      "bytes": 7819105,
+      "file": "hand_landmarker.task"
+    },
+    "ch_PP-OCRv5_det_mobile.onnx": {
+      "url": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.10.0/onnx/PP-OCRv5/det/ch_PP-OCRv5_det_mobile.onnx",
+      "sha256": "4d97c44a20d30a81aad087d6a396b08f786c4635742afc391f6621f5c6ae78ae",
+      "bytes": 4819576,
+      "inputs": {
+        "x": [
+          "DynamicDimension.0",
+          3,
+          "DynamicDimension.1",
+          "DynamicDimension.2"
+        ]
+      },
+      "outputs": {
+        "fetch_name_0": [
+          "ConvTranspose_497_o0__d0",
+          "ConvTranspose_497_o0__d1",
+          "ConvTranspose_497_o0__d2",
+          "ConvTranspose_497_o0__d3"
+        ]
+      }
+    },
+    "ch_PP-OCRv5_rec_mobile.onnx": {
+      "url": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.10.0/onnx/PP-OCRv5/rec/ch_PP-OCRv5_rec_mobile.onnx",
+      "sha256": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+      "bytes": 16631306,
+      "inputs": {
+        "x": [
+          "DynamicDimension.0",
+          3,
+          48,
+          "DynamicDimension.1"
+        ]
+      },
+      "outputs": {
+        "fetch_name_0": [
+          "DynamicDimension.0",
+          "Reshape_524_o0__d2",
+          18385
+        ]
+      },
+      "dictionary_file": "rec_character_dict_v5.txt"
+    },
+    "ch_PP-OCRv5_det_server.onnx": {
+      "url": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.10.0/onnx/PP-OCRv5/det/ch_PP-OCRv5_det_server.onnx",
+      "sha256": "0f8846b1d4bba223a2a2f9d9b44022fbc22cc019051a602b41a7fda9667e4cad",
+      "bytes": 88118768,
+      "inputs": {
+        "x": [
+          "DynamicDimension.0",
+          3,
+          "DynamicDimension.1",
+          "DynamicDimension.2"
+        ]
+      },
+      "outputs": {
+        "fetch_name_0": [
+          "ConvTranspose_570_o0__d0",
+          "ConvTranspose_570_o0__d1",
+          "ConvTranspose_570_o0__d2",
+          "ConvTranspose_570_o0__d3"
+        ]
+      }
+    },
+    "ch_PP-OCRv5_rec_server.onnx": {
+      "url": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.10.0/onnx/PP-OCRv5/rec/ch_PP-OCRv5_rec_server.onnx",
+      "sha256": "e09385400eaaaef34ceff54aeb7c4f0f1fe014c27fa8b9905d4709b65746562a",
+      "bytes": 84577022,
+      "inputs": {
+        "x": [
+          "DynamicDimension.0",
+          3,
+          48,
+          "DynamicDimension.1"
+        ]
+      },
+      "outputs": {
+        "fetch_name_0": [
+          "DynamicDimension.0",
+          "Reshape_486_o0__d2",
+          18385
+        ]
+      },
+      "dictionary_file": "rec_character_dict_v5.txt"
+    },
+    "PP-OCRv6_det_small.onnx": {
+      "url": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.10.0/onnx/PP-OCRv6/det/PP-OCRv6_det_small.onnx",
+      "sha256": "090f04abcd9d9a7498bc4ebf677e4cb9bdce1fe4197ddb7e529f1ef44e1ff94f",
+      "bytes": 9929594,
+      "inputs": {
+        "x": [
+          "DynamicDimension.0",
+          3,
+          "DynamicDimension.1",
+          "DynamicDimension.2"
+        ]
+      },
+      "outputs": {
+        "fetch_name_0": [
+          "ConvTranspose_459_o0__d0",
+          "ConvTranspose_459_o0__d1",
+          "ConvTranspose_459_o0__d2",
+          "ConvTranspose_459_o0__d3"
+        ]
+      }
+    },
+    "PP-OCRv6_rec_small.onnx": {
+      "url": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.10.0/onnx/PP-OCRv6/rec/PP-OCRv6_rec_small.onnx",
+      "sha256": "6f327246b50388f3c176ae304bd95767ea6dc0c9ae92153ef8cbe210b3c14884",
+      "bytes": 21234383,
+      "inputs": {
+        "x": [
+          "DynamicDimension.0",
+          3,
+          48,
+          "DynamicDimension.1"
+        ]
+      },
+      "outputs": {
+        "fetch_name_0": [
+          "DynamicDimension.0",
+          "Reshape_470_o0__d2",
+          18710
+        ]
+      },
+      "dictionary_file": "rec_character_dict_v6_small.txt"
+    },
+    "rec_character_dict_v5.txt": {
+      "sha256": "d1979e9f794c464c0d2e0b70a7fe14dd978e9dc644c0e71f14158cdf8342af1b",
+      "bytes": 74012,
+      "dictionary_classes_with_blank_and_space": 18385,
+      "source": "character metadata from paired RapidOCR ONNX model"
+    },
+    "rec_character_dict_v6_small.txt": {
+      "sha256": "b5f2bfe2bdd9448429e3e82b51c789775d9b42f2403d082b00662eb77e401c5d",
+      "bytes": 74947,
+      "dictionary_classes_with_blank_and_space": 18710,
+      "source": "character metadata from paired RapidOCR ONNX model"
+    },
+    "ch_ppocr_mobile_v2.0_rec_infer.onnx": {
+      "url": "https://huggingface.co/SWHL/RapidOCR/resolve/38f67e0558416db6056ddd8613292d23b5ff002c/PP-OCRv1/ch_ppocr_mobile_v2.0_rec_infer.onnx",
+      "download_mirror": "https://hf-mirror.com/SWHL/RapidOCR/resolve/38f67e0558416db6056ddd8613292d23b5ff002c/PP-OCRv1/ch_ppocr_mobile_v2.0_rec_infer.onnx",
+      "sha256": "6701d6db953d6e803024ec2e86ab3a5ec9132a2cf47b15b843ce6f1522486a55",
+      "bytes": 4444090,
+      "inputs": {
+        "x": [
+          -1,
+          3,
+          32,
+          "?"
+        ]
+      },
+      "outputs": {
+        "save_infer_model/scale_0.tmp_1": [
+          -1,
+          25,
+          6625
+        ]
+      },
+      "architecture": "CRNN: MobileNetV3 + bidirectional LSTM + CTC",
+      "lstm_nodes": 2,
+      "dictionary_file": "rec_character_dict_crnn.txt"
+    },
+    "rec_character_dict_crnn.txt": {
+      "sha256": "a1c84d9bdb9ab29043c58896224d32941783eb821629618416dcb08f12886492",
+      "bytes": 26250,
+      "dictionary_classes_with_blank_and_space": 6625,
+      "source": "ONNX character metadata"
+    }
+  },
+  "hand_landmarker": {
+    "delegate": "CPU",
+    "running_mode": "VIDEO",
+    "max_hands": 2,
+    "task_version": "float16/1"
+  },
+  "ml_kit": {
+    "artifact": "com.google.mlkit:text-recognition-chinese:16.0.1",
+    "delivery": "bundled in APK",
+    "dictionary": "SDK-managed"
+  }
+}

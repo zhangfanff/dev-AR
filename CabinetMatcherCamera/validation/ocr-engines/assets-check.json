@@ -1,0 +1,14 @@
+{
+  "models_hashed": 20,
+  "ocr_options": [
+    "V4",
+    "V6_TINY",
+    "V5_MOBILE",
+    "V5_SERVER",
+    "V6_SMALL",
+    "ML_KIT_CHINESE",
+    "DBNET_CRNN"
+  ],
+  "apk_bytes": 355748444,
+  "apk_sha256": "628c61abecb9969213bbd30059309f0113d46f7111576fe3bca852c36c1da10f"
+}

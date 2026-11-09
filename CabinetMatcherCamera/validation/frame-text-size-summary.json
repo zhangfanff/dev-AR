@@ -1,0 +1,30 @@
+[
+  {
+    "Ocr": "V4",
+    "Directions": "SINGLE",
+    "SizeMode": "FOLLOW_FRAME",
+    "Inputs": "0deg: 1706x1279 -> 1696x1280",
+    "Matches": 3
+  },
+  {
+    "Ocr": "V4",
+    "Directions": "FOUR_DIRECTIONS",
+    "SizeMode": "FOLLOW_FRAME",
+    "Inputs": "0deg: 1706x1279 -> 1696x1280; 90deg: 1279x1706 -> 1280x1696; 180deg: 1706x1279 -> 1696x1280; 270deg: 1279x1706 -> 1280x1696",
+    "Matches": 3
+  },
+  {
+    "Ocr": "ML_KIT_CHINESE",
+    "Directions": "SINGLE",
+    "SizeMode": "FOLLOW_FRAME",
+    "Inputs": "0deg: 1706x1279 -> 1706x1279",
+    "Matches": 3
+  },
+  {
+    "Ocr": "ML_KIT_CHINESE",
+    "Directions": "FOUR_DIRECTIONS",
+    "SizeMode": "FOLLOW_FRAME",
+    "Inputs": "0deg: 1706x1279 -> 1706x1279; 90deg: 1279x1706 -> 1279x1706; 180deg: 1706x1279 -> 1706x1279; 270deg: 1279x1706 -> 1279x1706",
+    "Matches": 3
+  }
+]

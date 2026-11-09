@@ -1,0 +1,222 @@
+{
+  "image_name": "camera_frame_2",
+  "image_size": {
+    "width": 720,
+    "height": 1280
+  },
+  "processing_image_size": {
+    "width": 720,
+    "height": 1280
+  },
+  "coordinate_system": "upright cropped analysis frame pixels; top-left origin; x right; y down",
+  "strategy": "match_before_recognition",
+  "algorithm": "knob-confidence-first one-to-one geometry matching, then OCR of assigned regions only",
+  "execution_order": [
+    "whole_image_text_detection",
+    "knob_detection",
+    "geometry_matching",
+    "selected_region_recognition"
+  ],
+  "matching_uses_recognition_confidence": false,
+  "retry_other_region_on_recognition_failure": false,
+  "elapsed_ms": 8637,
+  "timings": {
+    "unit": "ms",
+    "clock": "System.nanoTime monotonic wall clock",
+    "models_reused": true,
+    "angle_classifier_enabled": false,
+    "detected_text_region_count": 1,
+    "recognition_attempt_count": 0,
+    "recognition_model_calls": 0,
+    "skipped_region_count": 1,
+    "scope": "image_load was measured during selection; analysis.total is button click to UI content update; pipeline.total preserves elapsed_ms scope; excludes gallery interaction, export and GPU frame presentation",
+    "totals_note": "Parent totals include child stages. Do not sum all keys; other includes cleanup, scheduling and instrumentation overhead. Optional or reused stages are zero.",
+    "stages_ms": {
+      "text_loop.crop": 0,
+      "text_loop.angle.model_load": 0,
+      "text_loop.angle.preprocess": 0,
+      "text_loop.angle.inference": 0,
+      "text_loop.angle.postprocess": 0,
+      "text_loop.recognition.preprocess": 0,
+      "text_loop.recognition.inference": 0,
+      "text_loop.recognition.postprocess": 0,
+      "text_loop.filter": 0,
+      "ocr_detection.preprocess": 462.5,
+      "ocr_detection.inference": 2646.291,
+      "ocr_detection.postprocess": 346.774,
+      "ocr_detection.total": 3461.25,
+      "ocr_detection.other": 5.685,
+      "yolo.preprocess": 642.314,
+      "yolo.inference": 4109.266,
+      "yolo.postprocess": 355.478,
+      "yolo.total": 5154.879,
+      "yolo.other": 47.822,
+      "region_prepare": 0.037,
+      "matching": 20.355,
+      "text_loop.total": 0.025,
+      "text_loop.other": 0.025,
+      "pipeline.total": 8637.303,
+      "pipeline.other": 0.757,
+      "camera.convert": 147.204,
+      "annotation": 382.846,
+      "camera.processing": 11178.897
+    },
+    "text_regions": []
+  },
+  "parameters": {
+    "max_distance_ratio_of_diagonal": 0.11999999999999998,
+    "max_distance_px": 176.23257360658386,
+    "processing_max_distance_px": 176.23257360658386,
+    "max_horizontal_px": null,
+    "max_angle_from_downward_degrees": 45,
+    "below_rule": "dy > 0 and degrees(atan2(abs(dx), dy)) <= max_angle_from_downward_degrees; processing image coordinates",
+    "yolo_confidence": 0.25,
+    "ocr_confidence": 0.5,
+    "ocr_det_side": 1600,
+    "angle_classifier": false,
+    "yolo_input_size": 1280,
+    "ocr_model": "V4"
+  },
+  "summary": {
+    "knob_count": 0,
+    "text_region_count": 1,
+    "geometric_match_count": 0,
+    "recognized_match_count": 0,
+    "recognition_failed_match_count": 0,
+    "recognition_attempt_count": 0,
+    "recognition_model_calls": 0,
+    "skipped_region_count": 1,
+    "unmatched_knob_count": 0,
+    "unmatched_text_region_count": 1
+  },
+  "matches": [],
+  "knob_results": [],
+  "processing_order": [],
+  "unmatched_knobs": [],
+  "unmatched_text_regions": [
+    {
+      "text_region": {
+        "id": 0,
+        "confidence": null,
+        "bbox_xyxy": [
+          254,
+          878,
+          719,
+          1098
+        ],
+        "center_xy": [
+          487,
+          987.75
+        ],
+        "type": "text_region",
+        "text": null,
+        "recognition_attempted": false,
+        "recognition_status": "not_requested",
+        "recognition_error": null,
+        "polygon": [
+          [
+            254,
+            883
+          ],
+          [
+            718,
+            878
+          ],
+          [
+            719,
+            1092
+          ],
+          [
+            257,
+            1098
+          ]
+        ]
+      },
+      "reason": "not_assigned_recognition_skipped",
+      "reason_description": "未被几何匹配选中，跳过文字识别"
+    }
+  ],
+  "input_results": {
+    "knobs": {
+      "count": 0,
+      "detections": []
+    },
+    "ocr": {
+      "count": 1,
+      "text_regions": [
+        {
+          "id": 0,
+          "confidence": null,
+          "bbox_xyxy": [
+            254,
+            878,
+            719,
+            1098
+          ],
+          "center_xy": [
+            487,
+            987.75
+          ],
+          "type": "text_region",
+          "text": null,
+          "recognition_attempted": false,
+          "recognition_status": "not_requested",
+          "recognition_error": null,
+          "polygon": [
+            [
+              254,
+              883
+            ],
+            [
+              718,
+              878
+            ],
+            [
+              719,
+              1092
+            ],
+            [
+              257,
+              1098
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "models": {
+    "label": "YOLOv8n 1280 · PP-OCRv4 · CPU",
+    "execution_provider": "CPUExecutionProvider",
+    "checkpoint": "train9\/weights\/best.pt",
+    "yolo_file": "knob_1280.onnx",
+    "yolo_input_size": 1280,
+    "ocr_model": "V4",
+    "ocr_detection_file": "ch_PP-OCRv4_det_infer.onnx",
+    "ocr_recognition_file": "ch_PP-OCRv4_rec_infer.onnx",
+    "dictionary_file": "rec_character_dict.txt",
+    "dictionary_classes": 6625,
+    "load_ms_outside_frame": 1356.9311,
+    "first_inference_for_loaded_models": false
+  },
+  "video": {
+    "frame_id": 2,
+    "session_id": 2,
+    "camera_timestamp_ns": 285063839960,
+    "received_monotonic_ns": 285064550500,
+    "processing_ms": 11178.9964,
+    "receive_to_ui_submission_ms": 11196.8801,
+    "sensor_frame_width": 1280,
+    "sensor_frame_height": 720,
+    "rotation_degrees": 90,
+    "backpressure_strategy": "KEEP_ONLY_LATEST",
+    "max_concurrent_inferences": 1,
+    "result_overlay_target": "live_preview_and_processed_frame",
+    "live_overlay": {
+      "mode": "latest_completed_result_over_live_preview",
+      "motion_compensation": false,
+      "tracking": false,
+      "age_reference": "analysis_frame_received_monotonic_ns",
+      "coordinate_mapping": "CameraX shared ViewPort; cropped rotated ImageProxy to PreviewView OutputTransform"
+    }
+  }
+}

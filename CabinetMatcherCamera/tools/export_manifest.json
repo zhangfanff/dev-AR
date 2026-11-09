@@ -1,0 +1,72 @@
+{
+  "source": "G:\\pythonProjects\\yolov12-main\\runs\\detect\\train9\\weights\\best.pt",
+  "source_pt_sha256": "6c2e11626e65247694de5a0c458810fb6c6880eaa69fd22d7a7f31d1bbcf45ac",
+  "architecture": "YOLOv8n",
+  "classes": {
+    "0": "konb"
+  },
+  "exports": {
+    "knob_640.onnx": {
+      "sha256": "e4166b19706605689b19f18c3793040c48e3ba2f3e0f5a52d597a268fe54e0e2",
+      "bytes": 12238686,
+      "input": [
+        1,
+        3,
+        640,
+        640
+      ],
+      "output": [
+        1,
+        5,
+        8400
+      ],
+      "opset": 17,
+      "dynamic": false,
+      "precision": "FP32",
+      "nms_in_graph": false,
+      "verification": [
+        {
+          "image": "1.jpg",
+          "max_score_error": 8.642673492431641e-07,
+          "max_box_error_pixels_above_conf_025": 0.0
+        },
+        {
+          "image": "2.jpg",
+          "max_score_error": 8.493661880493164e-07,
+          "max_box_error_pixels_above_conf_025": 6.103515625e-05
+        }
+      ]
+    },
+    "knob_1280.onnx": {
+      "sha256": "c769cfcd250cc69c77c60a27dc1437588dfb48b08dfd11f9a297d92d66dcb0fe",
+      "bytes": 12742692,
+      "input": [
+        1,
+        3,
+        1280,
+        1280
+      ],
+      "output": [
+        1,
+        5,
+        33600
+      ],
+      "opset": 17,
+      "dynamic": false,
+      "precision": "FP32",
+      "nms_in_graph": false,
+      "verification": [
+        {
+          "image": "1.jpg",
+          "max_score_error": 1.1920928955078125e-06,
+          "max_box_error_pixels_above_conf_025": 6.103515625e-05
+        },
+        {
+          "image": "2.jpg",
+          "max_score_error": 1.385807991027832e-06,
+          "max_box_error_pixels_above_conf_025": 6.103515625e-05
+        }
+      ]
+    }
+  }
+}

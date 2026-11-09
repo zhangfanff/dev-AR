@@ -1,0 +1,12 @@
+
+com.example.cabinetmatcher.camera.KnobRelativeExportTest:...
+com.example.cabinetmatcher.camera.OverlayPreviewTest:....
+com.example.cabinetmatcher.camera.MatchedRegionsDebugTest:..
+com.example.cabinetmatcher.camera.CombinedFeaturesTest:.
+com.example.cabinetmatcher.camera.CameraSmokeTest:.
+
+Time: 42.714
+
+OK (11 tests)
+
+

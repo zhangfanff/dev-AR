@@ -1,0 +1,68 @@
+[
+  {
+    "file": "ch_PP-OCRv5_det_mobile.onnx",
+    "ir_version": 10,
+    "opsets": [
+      [
+        "",
+        14
+      ]
+    ],
+    "bytes": 4819576
+  },
+  {
+    "file": "ch_PP-OCRv5_rec_mobile.onnx",
+    "ir_version": 10,
+    "opsets": [
+      [
+        "",
+        14
+      ]
+    ],
+    "bytes": 16631306
+  },
+  {
+    "file": "ch_PP-OCRv5_det_server.onnx",
+    "ir_version": 10,
+    "opsets": [
+      [
+        "",
+        14
+      ]
+    ],
+    "bytes": 88118768
+  },
+  {
+    "file": "ch_PP-OCRv5_rec_server.onnx",
+    "ir_version": 10,
+    "opsets": [
+      [
+        "",
+        10
+      ]
+    ],
+    "bytes": 84577022
+  },
+  {
+    "file": "PP-OCRv6_det_small.onnx",
+    "ir_version": 10,
+    "opsets": [
+      [
+        "",
+        11
+      ]
+    ],
+    "bytes": 9929594
+  },
+  {
+    "file": "PP-OCRv6_rec_small.onnx",
+    "ir_version": 10,
+    "opsets": [
+      [
+        "",
+        11
+      ]
+    ],
+    "bytes": 21234383
+  }
+]

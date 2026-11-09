@@ -1,0 +1,30 @@
+{
+  "original_source_files_unchanged": 46,
+  "unit_tests": [
+    {
+      "suite": "com.example.cabinetmatcher.camera.core.DownwardMatchingTest",
+      "count": 9
+    },
+    {
+      "suite": "com.example.cabinetmatcher.camera.core.FrameGateTest",
+      "count": 4
+    },
+    {
+      "suite": "com.example.cabinetmatcher.camera.core.MatchingTest",
+      "count": 8
+    },
+    {
+      "suite": "com.example.cabinetmatcher.camera.core.SelectiveTest",
+      "count": 4
+    },
+    {
+      "suite": "com.example.cabinetmatcher.camera.core.YuvPackingTest",
+      "count": 4
+    }
+  ],
+  "unit_tests_passed": 29,
+  "android_tests_passed": 3,
+  "android_test_device": "temporary x86_64 Android 36.1 emulator; synthetic rear camera",
+  "slow_frame_test": "2 seconds of artificial delay per frame; preview streaming and fresh next frame asserted",
+  "physical_phone_tested": false
+}

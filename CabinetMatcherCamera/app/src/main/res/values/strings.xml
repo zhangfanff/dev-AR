@@ -1,0 +1,7 @@
+<resources>
+    <string name="angle_classifier">纠正倒置文字（0° / 180°）</string>
+    <string name="ready_image">%1$s · %2$d × %3$d\n已就绪，点击开始匹配与识别。</string>
+    <string name="result_summary">几何匹配 %1$d 对 · 旋钮 %2$d · 文字区域 %3$d</string>
+    <string name="error_message">%1$s：%2$s</string>
+    <color name="icon_background">#166534</color>
+</resources>

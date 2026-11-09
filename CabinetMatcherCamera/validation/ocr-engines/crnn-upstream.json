@@ -1,0 +1,12 @@
+{
+  "type": "file",
+  "oid": "135450a652f71d962a582c9e68ec9676c7de155b",
+  "size": 4444090,
+  "lfs": {
+    "oid": "6701d6db953d6e803024ec2e86ab3a5ec9132a2cf47b15b843ce6f1522486a55",
+    "size": 4444090,
+    "pointerSize": 132
+  },
+  "xetHash": "d1855dd44510a33d9a29797e4b8c207c1db31f3eb30d64960f279aa9a28dd53b",
+  "path": "PP-OCRv1/ch_ppocr_mobile_v2.0_rec_infer.onnx"
+}

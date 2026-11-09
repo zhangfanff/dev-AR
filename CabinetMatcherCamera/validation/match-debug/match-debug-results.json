@@ -1,0 +1,1255 @@
+{
+  "image_size": {
+    "width": 800,
+    "height": 1400
+  },
+  "processing_image_size": {
+    "width": 800,
+    "height": 1400
+  },
+  "coordinate_system": "upright cropped analysis frame pixels; top-left origin; x right; y down",
+  "strategy": "match_before_recognition",
+  "algorithm": "knob-confidence-first one-to-one geometry matching, then OCR of assigned regions only",
+  "execution_order": [
+    "whole_image_text_detection",
+    "knob_detection",
+    "geometry_matching",
+    "selected_region_recognition",
+    "combined_annotation"
+  ],
+  "matching_uses_recognition_confidence": false,
+  "retry_other_region_on_recognition_failure": false,
+  "elapsed_ms": 0,
+  "timings": {
+    "unit": "ms",
+    "clock": "System.nanoTime monotonic wall clock",
+    "models_reused": false,
+    "angle_classifier_enabled": false,
+    "detected_text_region_count": 0,
+    "recognition_attempt_count": 0,
+    "recognition_model_calls": 0,
+    "skipped_region_count": 0,
+    "scope": "Durations are wall-clock spans, not CPU time. In PARALLEL, model durations overlap and MUST NOT be added. detection.wall spans YOLO + text detection including join; pipeline.total is cabinet path including joins\/matching\/selected OCR; hands.total includes its own bitmap conversion and optional tracker reset; combined.total joins cabinet + hands and includes snapshot\/annotations; camera.processing also includes frame conversion; excludes export and screen presentation",
+    "totals_note": "Parent totals include child stages. Do not sum all keys; other includes cleanup, scheduling and instrumentation overhead. Optional or reused stages are zero.",
+    "stages_ms": {},
+    "text_regions": []
+  },
+  "parameters": {
+    "max_distance_ratio_of_diagonal": 0.21706078553111482,
+    "max_distance_px": 350.00000000000006,
+    "processing_max_distance_px": 350,
+    "text_center_must_be_outside_knob_box": true,
+    "knob_box_boundary_counts_as_inside": true,
+    "text_center_outside_rule": "text.cx < knob.x1 OR text.cx > knob.x2 OR text.cy < knob.y1 OR text.cy > knob.y2; applied separately to each current knob",
+    "max_lateral_processing_px": null,
+    "max_horizontal_px": null,
+    "search_direction": "RIGHT",
+    "sector_half_angle_degrees": 30,
+    "max_angle_from_downward_degrees": null,
+    "sector_rule": "positive projection on selected axis and atan2(abs(perpendicular projection), forward projection) <= half angle; ALL uses union of four axes; closest available text wins once",
+    "below_rule": null,
+    "inference_mode": "SERIAL",
+    "yolo_confidence": 0.25,
+    "ocr_confidence": 0.5,
+    "ocr_det_side": 1600,
+    "angle_classifier": true,
+    "yolo_input_size": 1280,
+    "ocr_model": "V4"
+  },
+  "summary": {
+    "knob_count": 4,
+    "text_region_count": 5,
+    "geometric_match_count": 3,
+    "recognized_match_count": 0,
+    "recognition_failed_match_count": 3,
+    "recognition_attempt_count": 0,
+    "recognition_model_calls": 0,
+    "skipped_region_count": 2,
+    "unmatched_knob_count": 1,
+    "unmatched_text_region_count": 2
+  },
+  "matches": [
+    {
+      "processing_rank": 1,
+      "knob": {
+        "id": 0,
+        "confidence": 0.95,
+        "bbox_xyxy": [
+          80,
+          400,
+          140,
+          440
+        ],
+        "center_xy": [
+          110,
+          420
+        ],
+        "class_id": 0,
+        "class_name": "knob"
+      },
+      "text_region": {
+        "id": 0,
+        "confidence": 0.12,
+        "bbox_xyxy": [
+          240,
+          400,
+          340,
+          440
+        ],
+        "center_xy": [
+          290,
+          420
+        ],
+        "type": "text_region",
+        "text": "原始低分输出",
+        "recognition_attempted": true,
+        "recognition_status": "low_confidence",
+        "recognition_error": null,
+        "polygon": [
+          [
+            240,
+            400
+          ],
+          [
+            340,
+            400
+          ],
+          [
+            340,
+            440
+          ],
+          [
+            240,
+            440
+          ]
+        ]
+      },
+      "recognition_status": "low_confidence",
+      "dx_px": 180,
+      "dy_px": 0,
+      "distance_px": 180,
+      "search_axis": "RIGHT"
+    },
+    {
+      "processing_rank": 2,
+      "knob": {
+        "id": 1,
+        "confidence": 0.94,
+        "bbox_xyxy": [
+          80,
+          650,
+          140,
+          690
+        ],
+        "center_xy": [
+          110,
+          670
+        ],
+        "class_id": 0,
+        "class_name": "knob"
+      },
+      "text_region": {
+        "id": 1,
+        "confidence": 0,
+        "bbox_xyxy": [
+          240,
+          650,
+          340,
+          690
+        ],
+        "center_xy": [
+          290,
+          670
+        ],
+        "type": "text_region",
+        "text": "",
+        "recognition_attempted": true,
+        "recognition_status": "empty_text",
+        "recognition_error": null,
+        "polygon": [
+          [
+            240,
+            650
+          ],
+          [
+            340,
+            650
+          ],
+          [
+            340,
+            690
+          ],
+          [
+            240,
+            690
+          ]
+        ]
+      },
+      "recognition_status": "empty_text",
+      "dx_px": 180,
+      "dy_px": 0,
+      "distance_px": 180,
+      "search_axis": "RIGHT"
+    },
+    {
+      "processing_rank": 3,
+      "knob": {
+        "id": 2,
+        "confidence": 0.9299999999999999,
+        "bbox_xyxy": [
+          80,
+          900,
+          140,
+          940
+        ],
+        "center_xy": [
+          110,
+          920
+        ],
+        "class_id": 0,
+        "class_name": "knob"
+      },
+      "text_region": {
+        "id": 2,
+        "confidence": null,
+        "bbox_xyxy": [
+          240,
+          900,
+          340,
+          940
+        ],
+        "center_xy": [
+          290,
+          920
+        ],
+        "type": "text_region",
+        "text": null,
+        "recognition_attempted": true,
+        "recognition_status": "error",
+        "recognition_error": "IllegalStateException: synthetic OCR failure",
+        "polygon": [
+          [
+            240,
+            900
+          ],
+          [
+            340,
+            900
+          ],
+          [
+            340,
+            940
+          ],
+          [
+            240,
+            940
+          ]
+        ]
+      },
+      "recognition_status": "error",
+      "dx_px": 180,
+      "dy_px": 0,
+      "distance_px": 180,
+      "search_axis": "RIGHT"
+    }
+  ],
+  "knob_results": [
+    {
+      "processing_rank": 1,
+      "knob": {
+        "id": 0,
+        "confidence": 0.95,
+        "bbox_xyxy": [
+          80,
+          400,
+          140,
+          440
+        ],
+        "center_xy": [
+          110,
+          420
+        ],
+        "class_id": 0,
+        "class_name": "knob"
+      },
+      "status": "geometrically_matched",
+      "matched_region_id": 0,
+      "recognition_status": "low_confidence",
+      "reason": null,
+      "candidate_evaluations": [
+        {
+          "region_id": 0,
+          "text": "原始低分输出",
+          "dx_px": 180,
+          "dy_px": 0,
+          "distance_px": 180,
+          "processing_distance_px": 180,
+          "geometrically_eligible": true,
+          "processing_angle_from_downward_degrees": 90,
+          "search_axis": "RIGHT",
+          "processing_angle_from_search_axis_degrees": 0,
+          "processing_lateral_offset_px": 0,
+          "available": true,
+          "selected": true,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [],
+          "rejection_reason_descriptions": []
+        },
+        {
+          "region_id": 1,
+          "text": "",
+          "dx_px": 180,
+          "dy_px": 250,
+          "distance_px": 308.0584,
+          "processing_distance_px": 308.0584,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 35.7539,
+          "search_axis": "RIGHT",
+          "processing_angle_from_search_axis_degrees": 54.2461,
+          "processing_lateral_offset_px": 250,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "outside_search_sector"
+          ],
+          "rejection_reason_descriptions": [
+            "文字偏离搜索轴，超出所选扇区"
+          ]
+        },
+        {
+          "region_id": 2,
+          "text": null,
+          "dx_px": 180,
+          "dy_px": 500,
+          "distance_px": 531.4132,
+          "processing_distance_px": 531.4132,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 19.7989,
+          "search_axis": "RIGHT",
+          "processing_angle_from_search_axis_degrees": 70.2011,
+          "processing_lateral_offset_px": 500,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "outside_search_sector",
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字偏离搜索轴，超出所选扇区",
+            "文字与旋钮距离超出阈值"
+          ]
+        },
+        {
+          "region_id": 9,
+          "text": null,
+          "dx_px": 320,
+          "dy_px": 0,
+          "distance_px": 320,
+          "processing_distance_px": 320,
+          "geometrically_eligible": true,
+          "processing_angle_from_downward_degrees": 90,
+          "search_axis": "RIGHT",
+          "processing_angle_from_search_axis_degrees": 0,
+          "processing_lateral_offset_px": 0,
+          "available": true,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [],
+          "rejection_reason_descriptions": []
+        },
+        {
+          "region_id": 10,
+          "text": null,
+          "dx_px": 590,
+          "dy_px": 800,
+          "distance_px": 994.0322,
+          "processing_distance_px": 994.0322,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 36.4088,
+          "search_axis": "RIGHT",
+          "processing_angle_from_search_axis_degrees": 53.5912,
+          "processing_lateral_offset_px": 800,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "outside_search_sector",
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字偏离搜索轴，超出所选扇区",
+            "文字与旋钮距离超出阈值"
+          ]
+        }
+      ]
+    },
+    {
+      "processing_rank": 2,
+      "knob": {
+        "id": 1,
+        "confidence": 0.94,
+        "bbox_xyxy": [
+          80,
+          650,
+          140,
+          690
+        ],
+        "center_xy": [
+          110,
+          670
+        ],
+        "class_id": 0,
+        "class_name": "knob"
+      },
+      "status": "geometrically_matched",
+      "matched_region_id": 1,
+      "recognition_status": "empty_text",
+      "reason": null,
+      "candidate_evaluations": [
+        {
+          "region_id": 0,
+          "text": "原始低分输出",
+          "dx_px": 180,
+          "dy_px": -250,
+          "distance_px": 308.0584,
+          "processing_distance_px": 308.0584,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 144.2461,
+          "search_axis": "RIGHT",
+          "processing_angle_from_search_axis_degrees": 54.2461,
+          "processing_lateral_offset_px": 250,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": 0,
+          "rejection_reasons": [
+            "outside_search_sector",
+            "text_already_used"
+          ],
+          "rejection_reason_descriptions": [
+            "文字偏离搜索轴，超出所选扇区",
+            "文字已被其他旋钮占用"
+          ]
+        },
+        {
+          "region_id": 1,
+          "text": "",
+          "dx_px": 180,
+          "dy_px": 0,
+          "distance_px": 180,
+          "processing_distance_px": 180,
+          "geometrically_eligible": true,
+          "processing_angle_from_downward_degrees": 90,
+          "search_axis": "RIGHT",
+          "processing_angle_from_search_axis_degrees": 0,
+          "processing_lateral_offset_px": 0,
+          "available": true,
+          "selected": true,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [],
+          "rejection_reason_descriptions": []
+        },
+        {
+          "region_id": 2,
+          "text": null,
+          "dx_px": 180,
+          "dy_px": 250,
+          "distance_px": 308.0584,
+          "processing_distance_px": 308.0584,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 35.7539,
+          "search_axis": "RIGHT",
+          "processing_angle_from_search_axis_degrees": 54.2461,
+          "processing_lateral_offset_px": 250,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "outside_search_sector"
+          ],
+          "rejection_reason_descriptions": [
+            "文字偏离搜索轴，超出所选扇区"
+          ]
+        },
+        {
+          "region_id": 9,
+          "text": null,
+          "dx_px": 320,
+          "dy_px": -250,
+          "distance_px": 406.0788,
+          "processing_distance_px": 406.0788,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 127.9987,
+          "search_axis": "RIGHT",
+          "processing_angle_from_search_axis_degrees": 37.9987,
+          "processing_lateral_offset_px": 250,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "outside_search_sector",
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字偏离搜索轴，超出所选扇区",
+            "文字与旋钮距离超出阈值"
+          ]
+        },
+        {
+          "region_id": 10,
+          "text": null,
+          "dx_px": 590,
+          "dy_px": 550,
+          "distance_px": 806.5978,
+          "processing_distance_px": 806.5978,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 47.0096,
+          "search_axis": "RIGHT",
+          "processing_angle_from_search_axis_degrees": 42.9904,
+          "processing_lateral_offset_px": 550,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "outside_search_sector",
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字偏离搜索轴，超出所选扇区",
+            "文字与旋钮距离超出阈值"
+          ]
+        }
+      ]
+    },
+    {
+      "processing_rank": 3,
+      "knob": {
+        "id": 2,
+        "confidence": 0.9299999999999999,
+        "bbox_xyxy": [
+          80,
+          900,
+          140,
+          940
+        ],
+        "center_xy": [
+          110,
+          920
+        ],
+        "class_id": 0,
+        "class_name": "knob"
+      },
+      "status": "geometrically_matched",
+      "matched_region_id": 2,
+      "recognition_status": "error",
+      "reason": null,
+      "candidate_evaluations": [
+        {
+          "region_id": 0,
+          "text": "原始低分输出",
+          "dx_px": 180,
+          "dy_px": -500,
+          "distance_px": 531.4132,
+          "processing_distance_px": 531.4132,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 160.2011,
+          "search_axis": "RIGHT",
+          "processing_angle_from_search_axis_degrees": 70.2011,
+          "processing_lateral_offset_px": 500,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": 0,
+          "rejection_reasons": [
+            "outside_search_sector",
+            "distance_exceeded",
+            "text_already_used"
+          ],
+          "rejection_reason_descriptions": [
+            "文字偏离搜索轴，超出所选扇区",
+            "文字与旋钮距离超出阈值",
+            "文字已被其他旋钮占用"
+          ]
+        },
+        {
+          "region_id": 1,
+          "text": "",
+          "dx_px": 180,
+          "dy_px": -250,
+          "distance_px": 308.0584,
+          "processing_distance_px": 308.0584,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 144.2461,
+          "search_axis": "RIGHT",
+          "processing_angle_from_search_axis_degrees": 54.2461,
+          "processing_lateral_offset_px": 250,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": 1,
+          "rejection_reasons": [
+            "outside_search_sector",
+            "text_already_used"
+          ],
+          "rejection_reason_descriptions": [
+            "文字偏离搜索轴，超出所选扇区",
+            "文字已被其他旋钮占用"
+          ]
+        },
+        {
+          "region_id": 2,
+          "text": null,
+          "dx_px": 180,
+          "dy_px": 0,
+          "distance_px": 180,
+          "processing_distance_px": 180,
+          "geometrically_eligible": true,
+          "processing_angle_from_downward_degrees": 90,
+          "search_axis": "RIGHT",
+          "processing_angle_from_search_axis_degrees": 0,
+          "processing_lateral_offset_px": 0,
+          "available": true,
+          "selected": true,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [],
+          "rejection_reason_descriptions": []
+        },
+        {
+          "region_id": 9,
+          "text": null,
+          "dx_px": 320,
+          "dy_px": -500,
+          "distance_px": 593.6329,
+          "processing_distance_px": 593.6329,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 147.3808,
+          "search_axis": "RIGHT",
+          "processing_angle_from_search_axis_degrees": 57.3808,
+          "processing_lateral_offset_px": 500,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "outside_search_sector",
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字偏离搜索轴，超出所选扇区",
+            "文字与旋钮距离超出阈值"
+          ]
+        },
+        {
+          "region_id": 10,
+          "text": null,
+          "dx_px": 590,
+          "dy_px": 300,
+          "distance_px": 661.8912,
+          "processing_distance_px": 661.8912,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 63.0478,
+          "search_axis": "RIGHT",
+          "processing_angle_from_search_axis_degrees": 26.9522,
+          "processing_lateral_offset_px": 300,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字与旋钮距离超出阈值"
+          ]
+        }
+      ]
+    },
+    {
+      "processing_rank": 4,
+      "knob": {
+        "id": 3,
+        "confidence": 0.8,
+        "bbox_xyxy": [
+          80,
+          1230,
+          140,
+          1270
+        ],
+        "center_xy": [
+          110,
+          1250
+        ],
+        "class_id": 0,
+        "class_name": "knob"
+      },
+      "status": "unmatched",
+      "matched_region_id": null,
+      "recognition_status": null,
+      "reason": "no_text_within_threshold",
+      "candidate_evaluations": [
+        {
+          "region_id": 0,
+          "text": "原始低分输出",
+          "dx_px": 180,
+          "dy_px": -830,
+          "distance_px": 849.2938,
+          "processing_distance_px": 849.2938,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 167.7639,
+          "search_axis": "RIGHT",
+          "processing_angle_from_search_axis_degrees": 77.7639,
+          "processing_lateral_offset_px": 830,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": 0,
+          "rejection_reasons": [
+            "outside_search_sector",
+            "distance_exceeded",
+            "text_already_used"
+          ],
+          "rejection_reason_descriptions": [
+            "文字偏离搜索轴，超出所选扇区",
+            "文字与旋钮距离超出阈值",
+            "文字已被其他旋钮占用"
+          ]
+        },
+        {
+          "region_id": 1,
+          "text": "",
+          "dx_px": 180,
+          "dy_px": -580,
+          "distance_px": 607.2891,
+          "processing_distance_px": 607.2891,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 162.7585,
+          "search_axis": "RIGHT",
+          "processing_angle_from_search_axis_degrees": 72.7585,
+          "processing_lateral_offset_px": 580,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": 1,
+          "rejection_reasons": [
+            "outside_search_sector",
+            "distance_exceeded",
+            "text_already_used"
+          ],
+          "rejection_reason_descriptions": [
+            "文字偏离搜索轴，超出所选扇区",
+            "文字与旋钮距离超出阈值",
+            "文字已被其他旋钮占用"
+          ]
+        },
+        {
+          "region_id": 2,
+          "text": null,
+          "dx_px": 180,
+          "dy_px": -330,
+          "distance_px": 375.8989,
+          "processing_distance_px": 375.8989,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 151.3895,
+          "search_axis": "RIGHT",
+          "processing_angle_from_search_axis_degrees": 61.3895,
+          "processing_lateral_offset_px": 330,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": 2,
+          "rejection_reasons": [
+            "outside_search_sector",
+            "distance_exceeded",
+            "text_already_used"
+          ],
+          "rejection_reason_descriptions": [
+            "文字偏离搜索轴，超出所选扇区",
+            "文字与旋钮距离超出阈值",
+            "文字已被其他旋钮占用"
+          ]
+        },
+        {
+          "region_id": 9,
+          "text": null,
+          "dx_px": 320,
+          "dy_px": -830,
+          "distance_px": 889.5504,
+          "processing_distance_px": 889.5504,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 158.9162,
+          "search_axis": "RIGHT",
+          "processing_angle_from_search_axis_degrees": 68.9162,
+          "processing_lateral_offset_px": 830,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "outside_search_sector",
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字偏离搜索轴，超出所选扇区",
+            "文字与旋钮距离超出阈值"
+          ]
+        },
+        {
+          "region_id": 10,
+          "text": null,
+          "dx_px": 590,
+          "dy_px": -30,
+          "distance_px": 590.7622,
+          "processing_distance_px": 590.7622,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 92.9108,
+          "search_axis": "RIGHT",
+          "processing_angle_from_search_axis_degrees": 2.9108,
+          "processing_lateral_offset_px": 30,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字与旋钮距离超出阈值"
+          ]
+        }
+      ]
+    }
+  ],
+  "processing_order": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "unmatched_knobs": [
+    {
+      "processing_rank": 4,
+      "knob": {
+        "id": 3,
+        "confidence": 0.8,
+        "bbox_xyxy": [
+          80,
+          1230,
+          140,
+          1270
+        ],
+        "center_xy": [
+          110,
+          1250
+        ],
+        "class_id": 0,
+        "class_name": "knob"
+      },
+      "reason": "no_text_within_threshold",
+      "reason_description": "文字未同时满足框外中心、所选方向、距离和侧向偏移条件"
+    }
+  ],
+  "unmatched_text_regions": [
+    {
+      "text_region": {
+        "id": 9,
+        "confidence": null,
+        "bbox_xyxy": [
+          380,
+          400,
+          480,
+          440
+        ],
+        "center_xy": [
+          430,
+          420
+        ],
+        "type": "text_region",
+        "text": null,
+        "recognition_attempted": false,
+        "recognition_status": "not_requested",
+        "recognition_error": null,
+        "polygon": [
+          [
+            380,
+            400
+          ],
+          [
+            480,
+            400
+          ],
+          [
+            480,
+            440
+          ],
+          [
+            380,
+            440
+          ]
+        ]
+      },
+      "reason": "not_assigned_recognition_skipped",
+      "reason_description": "未被几何匹配选中，跳过文字识别"
+    },
+    {
+      "text_region": {
+        "id": 10,
+        "confidence": null,
+        "bbox_xyxy": [
+          650,
+          1200,
+          750,
+          1240
+        ],
+        "center_xy": [
+          700,
+          1220
+        ],
+        "type": "text_region",
+        "text": null,
+        "recognition_attempted": false,
+        "recognition_status": "not_requested",
+        "recognition_error": null,
+        "polygon": [
+          [
+            650,
+            1200
+          ],
+          [
+            750,
+            1200
+          ],
+          [
+            750,
+            1240
+          ],
+          [
+            650,
+            1240
+          ]
+        ]
+      },
+      "reason": "not_assigned_recognition_skipped",
+      "reason_description": "未被几何匹配选中，跳过文字识别"
+    }
+  ],
+  "input_results": {
+    "knobs": {
+      "count": 4,
+      "detections": [
+        {
+          "id": 0,
+          "confidence": 0.95,
+          "bbox_xyxy": [
+            80,
+            400,
+            140,
+            440
+          ],
+          "center_xy": [
+            110,
+            420
+          ],
+          "class_id": 0,
+          "class_name": "knob"
+        },
+        {
+          "id": 1,
+          "confidence": 0.94,
+          "bbox_xyxy": [
+            80,
+            650,
+            140,
+            690
+          ],
+          "center_xy": [
+            110,
+            670
+          ],
+          "class_id": 0,
+          "class_name": "knob"
+        },
+        {
+          "id": 2,
+          "confidence": 0.9299999999999999,
+          "bbox_xyxy": [
+            80,
+            900,
+            140,
+            940
+          ],
+          "center_xy": [
+            110,
+            920
+          ],
+          "class_id": 0,
+          "class_name": "knob"
+        },
+        {
+          "id": 3,
+          "confidence": 0.8,
+          "bbox_xyxy": [
+            80,
+            1230,
+            140,
+            1270
+          ],
+          "center_xy": [
+            110,
+            1250
+          ],
+          "class_id": 0,
+          "class_name": "knob"
+        }
+      ]
+    },
+    "ocr": {
+      "count": 5,
+      "text_regions": [
+        {
+          "id": 0,
+          "confidence": 0.12,
+          "bbox_xyxy": [
+            240,
+            400,
+            340,
+            440
+          ],
+          "center_xy": [
+            290,
+            420
+          ],
+          "type": "text_region",
+          "text": "原始低分输出",
+          "recognition_attempted": true,
+          "recognition_status": "low_confidence",
+          "recognition_error": null,
+          "polygon": [
+            [
+              240,
+              400
+            ],
+            [
+              340,
+              400
+            ],
+            [
+              340,
+              440
+            ],
+            [
+              240,
+              440
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "confidence": 0,
+          "bbox_xyxy": [
+            240,
+            650,
+            340,
+            690
+          ],
+          "center_xy": [
+            290,
+            670
+          ],
+          "type": "text_region",
+          "text": "",
+          "recognition_attempted": true,
+          "recognition_status": "empty_text",
+          "recognition_error": null,
+          "polygon": [
+            [
+              240,
+              650
+            ],
+            [
+              340,
+              650
+            ],
+            [
+              340,
+              690
+            ],
+            [
+              240,
+              690
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "confidence": null,
+          "bbox_xyxy": [
+            240,
+            900,
+            340,
+            940
+          ],
+          "center_xy": [
+            290,
+            920
+          ],
+          "type": "text_region",
+          "text": null,
+          "recognition_attempted": true,
+          "recognition_status": "error",
+          "recognition_error": "IllegalStateException: synthetic OCR failure",
+          "polygon": [
+            [
+              240,
+              900
+            ],
+            [
+              340,
+              900
+            ],
+            [
+              340,
+              940
+            ],
+            [
+              240,
+              940
+            ]
+          ]
+        },
+        {
+          "id": 9,
+          "confidence": null,
+          "bbox_xyxy": [
+            380,
+            400,
+            480,
+            440
+          ],
+          "center_xy": [
+            430,
+            420
+          ],
+          "type": "text_region",
+          "text": null,
+          "recognition_attempted": false,
+          "recognition_status": "not_requested",
+          "recognition_error": null,
+          "polygon": [
+            [
+              380,
+              400
+            ],
+            [
+              480,
+              400
+            ],
+            [
+              480,
+              440
+            ],
+            [
+              380,
+              440
+            ]
+          ]
+        },
+        {
+          "id": 10,
+          "confidence": null,
+          "bbox_xyxy": [
+            650,
+            1200,
+            750,
+            1240
+          ],
+          "center_xy": [
+            700,
+            1220
+          ],
+          "type": "text_region",
+          "text": null,
+          "recognition_attempted": false,
+          "recognition_status": "not_requested",
+          "recognition_error": null,
+          "polygon": [
+            [
+              650,
+              1200
+            ],
+            [
+              750,
+              1200
+            ],
+            [
+              750,
+              1240
+            ],
+            [
+              650,
+              1240
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "matching_debug": {
+    "selected_regions_kept_on_ocr_failure": true,
+    "all_detected_regions_drawn": true,
+    "raw_region_preview_available": true,
+    "raw_region_preview": "same-frame unannotated source; region bounding rectangle with detected polygon outline",
+    "recognition_threshold": 0.5
+  },
+  "models": {
+    "label": "YOLOv8n 1280 · PP-OCRv4 · CPU",
+    "execution_provider": "CPUExecutionProvider",
+    "checkpoint": "train9\/weights\/best.pt",
+    "yolo_file": "knob_1280.onnx",
+    "yolo_input_size": 1280,
+    "ocr_model": "V4",
+    "ocr_detection_file": "ch_PP-OCRv4_det_infer.onnx",
+    "ocr_recognition_file": "ch_PP-OCRv4_rec_infer.onnx",
+    "dictionary_file": "rec_character_dict.txt",
+    "dictionary_classes": 6625,
+    "load_ms_outside_frame": 0,
+    "first_inference_for_loaded_models": false,
+    "hand_model": "hand_landmarker.task",
+    "hand_backend": "MediaPipe CPU",
+    "hand_model_load_ms_outside_frame": 0
+  },
+  "hand_landmarks": {
+    "completed": false,
+    "count": 0,
+    "frame_id": 1,
+    "camera_timestamp_ns": 1,
+    "mediapipe_timestamp_ms": 0,
+    "same_frame_as_cabinet": false,
+    "mode": "21_point_hand_landmarks",
+    "coordinate_system": "upright analysis frame pixels; normalized z is model-relative depth, not meters",
+    "hands": []
+  },
+  "execution": {
+    "mode": "SERIAL",
+    "same_frame_only": true,
+    "all_branches_joined_before_publish": false,
+    "max_concurrent_model_tasks": 1,
+    "ort_intra_op_threads_per_session": 2,
+    "ort_inter_op_threads_per_session": 1,
+    "ocr_recognition_requires": "YOLO and whole-image text detection, then geometry matching",
+    "hand_inference_independent_of_cabinet": true
+  },
+  "video": {
+    "frame_id": 1,
+    "session_id": 1,
+    "camera_timestamp_ns": 1,
+    "received_monotonic_ns": 338095274400,
+    "processing_ms": 0.0173,
+    "receive_to_ui_submission_ms": 0,
+    "sensor_frame_width": 800,
+    "sensor_frame_height": 1400,
+    "rotation_degrees": 0,
+    "backpressure_strategy": "KEEP_ONLY_LATEST",
+    "max_concurrent_frames": 1,
+    "max_concurrent_inferences": 1,
+    "result_overlay_target": "live_preview_and_processed_frame",
+    "live_overlay": {
+      "mode": "latest_completed_result_over_live_preview",
+      "motion_compensation": false,
+      "tracking": false,
+      "age_reference": "analysis_frame_received_monotonic_ns",
+      "coordinate_mapping": "CameraX shared ViewPort; cropped rotated ImageProxy to PreviewView OutputTransform"
+    }
+  }
+}

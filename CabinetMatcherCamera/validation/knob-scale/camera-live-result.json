@@ -1,0 +1,356 @@
+{
+  "image_name": "camera_frame_2",
+  "image_size": {
+    "width": 720,
+    "height": 1280
+  },
+  "processing_image_size": {
+    "width": 720,
+    "height": 1280
+  },
+  "coordinate_system": "upright cropped analysis frame pixels; top-left origin; x right; y down",
+  "strategy": "match_before_recognition",
+  "algorithm": "knob-confidence-first one-to-one geometry matching, then OCR of assigned regions only",
+  "execution_order": [
+    "parallel_yolo_ocr_detection_and_hands",
+    "join_yolo_and_ocr_detection",
+    "geometry_matching",
+    "selected_region_recognition",
+    "join_cabinet_and_hands",
+    "combined_annotation"
+  ],
+  "matching_uses_recognition_confidence": false,
+  "retry_other_region_on_recognition_failure": false,
+  "elapsed_ms": 2237,
+  "timings": {
+    "unit": "ms",
+    "clock": "System.nanoTime monotonic wall clock",
+    "models_reused": true,
+    "angle_classifier_enabled": true,
+    "detected_text_region_count": 2,
+    "recognition_attempt_count": 0,
+    "recognition_model_calls": 0,
+    "skipped_region_count": 2,
+    "scope": "Durations are wall-clock spans, not CPU time. In PARALLEL, model durations overlap and MUST NOT be added. detection.wall spans YOLO + text detection including join; pipeline.total is cabinet path including joins\/matching\/selected OCR; hands.total includes its own bitmap conversion and optional tracker reset; combined.total joins cabinet + hands and includes snapshot\/annotations; camera.processing also includes frame conversion; excludes export and screen presentation",
+    "totals_note": "Parent totals include child stages. Do not sum all keys; other includes cleanup, scheduling and instrumentation overhead. Optional or reused stages are zero.",
+    "stages_ms": {
+      "text_loop.crop": 0,
+      "text_loop.angle.model_load": 0,
+      "text_loop.angle.preprocess": 0,
+      "text_loop.angle.inference": 0,
+      "text_loop.angle.postprocess": 0,
+      "text_loop.recognition.preprocess": 0,
+      "text_loop.recognition.inference": 0,
+      "text_loop.recognition.postprocess": 0,
+      "text_loop.filter": 0,
+      "ocr_detection.preprocess": 855.513,
+      "ocr_detection.inference": 1337.338,
+      "ocr_detection.postprocess": 43.178,
+      "ocr_detection.total": 2236.806,
+      "ocr_detection.other": 0.776,
+      "yolo.preprocess": 712.767,
+      "yolo.inference": 1289.79,
+      "yolo.postprocess": 15.26,
+      "yolo.total": 2018.275,
+      "yolo.other": 0.458,
+      "detection.wall": 2237.204,
+      "region_prepare": 0.036,
+      "matching": 0.073,
+      "text_loop.total": 0.023,
+      "text_loop.other": 0.023,
+      "pipeline.total": 2237.558,
+      "pipeline.other": 0.223,
+      "hands.model_reset": 0,
+      "hands.bitmap": 417.892,
+      "hands.inference": 397.484,
+      "hands.total": 849.46,
+      "camera.convert": 214.461,
+      "camera.bitmap": 122.011,
+      "annotation.base": 5.027,
+      "annotation.hands": 0.033,
+      "annotation": 5.06,
+      "combined.total": 2364.873,
+      "camera.processing": 4591.95
+    },
+    "text_regions": []
+  },
+  "parameters": {
+    "distance_basis": "per_knob_box_diagonal",
+    "max_distance_knob_diagonal_multiplier": 1,
+    "min_text_outside_knob_area_ratio": 0.3333333333333333,
+    "overlap_area_geometry": "actual text polygon intersected with current axis-aligned YOLO box",
+    "max_distance_ratio_of_diagonal": null,
+    "max_distance_px": null,
+    "processing_max_distance_px": null,
+    "text_center_must_be_outside_knob_box": false,
+    "knob_box_boundary_counts_as_inside": false,
+    "text_center_outside_rule": null,
+    "text_area_outside_rule": "(text_polygon_area - intersection_with_current_knob_box_area) \/ text_polygon_area >= 1\/3; zero-area text rejected",
+    "max_lateral_processing_px": null,
+    "max_horizontal_px": null,
+    "search_direction": "DOWN",
+    "sector_half_angle_degrees": 45,
+    "max_angle_from_downward_degrees": 45,
+    "sector_rule": "positive projection on selected axis and atan2(abs(perpendicular projection), forward projection) <= half angle; ALL uses union of four axes; closest available text wins once",
+    "below_rule": "dy > 0 and degrees(atan2(abs(dx), dy)) <= sector_half_angle_degrees; processing image coordinates",
+    "inference_mode": "PARALLEL",
+    "yolo_confidence": 0.25,
+    "ocr_confidence": 0.5,
+    "ocr_det_side": 1600,
+    "angle_classifier": true,
+    "yolo_input_size": 640,
+    "ocr_model": "V6_TINY"
+  },
+  "summary": {
+    "knob_count": 0,
+    "text_region_count": 2,
+    "geometric_match_count": 0,
+    "recognized_match_count": 0,
+    "recognition_failed_match_count": 0,
+    "recognition_attempt_count": 0,
+    "recognition_model_calls": 0,
+    "skipped_region_count": 2,
+    "unmatched_knob_count": 0,
+    "unmatched_text_region_count": 2
+  },
+  "matches": [],
+  "knob_results": [],
+  "processing_order": [],
+  "unmatched_knobs": [],
+  "unmatched_text_regions": [
+    {
+      "text_region": {
+        "id": 0,
+        "confidence": null,
+        "bbox_xyxy": [
+          509,
+          449,
+          711,
+          639
+        ],
+        "center_xy": [
+          610,
+          544
+        ],
+        "type": "text_region",
+        "text": null,
+        "recognition_attempted": false,
+        "recognition_status": "not_requested",
+        "recognition_error": null,
+        "polygon": [
+          [
+            509,
+            449
+          ],
+          [
+            711,
+            449
+          ],
+          [
+            711,
+            639
+          ],
+          [
+            509,
+            639
+          ]
+        ]
+      },
+      "reason": "not_assigned_recognition_skipped",
+      "reason_description": "未被几何匹配选中，跳过文字识别"
+    },
+    {
+      "text_region": {
+        "id": 1,
+        "confidence": null,
+        "bbox_xyxy": [
+          0,
+          758,
+          719,
+          1220
+        ],
+        "center_xy": [
+          361,
+          989
+        ],
+        "type": "text_region",
+        "text": null,
+        "recognition_attempted": false,
+        "recognition_status": "not_requested",
+        "recognition_error": null,
+        "polygon": [
+          [
+            0,
+            772
+          ],
+          [
+            719,
+            758
+          ],
+          [
+            719,
+            1206
+          ],
+          [
+            6,
+            1220
+          ]
+        ]
+      },
+      "reason": "not_assigned_recognition_skipped",
+      "reason_description": "未被几何匹配选中，跳过文字识别"
+    }
+  ],
+  "input_results": {
+    "knobs": {
+      "count": 0,
+      "detections": []
+    },
+    "ocr": {
+      "count": 2,
+      "text_regions": [
+        {
+          "id": 0,
+          "confidence": null,
+          "bbox_xyxy": [
+            509,
+            449,
+            711,
+            639
+          ],
+          "center_xy": [
+            610,
+            544
+          ],
+          "type": "text_region",
+          "text": null,
+          "recognition_attempted": false,
+          "recognition_status": "not_requested",
+          "recognition_error": null,
+          "polygon": [
+            [
+              509,
+              449
+            ],
+            [
+              711,
+              449
+            ],
+            [
+              711,
+              639
+            ],
+            [
+              509,
+              639
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "confidence": null,
+          "bbox_xyxy": [
+            0,
+            758,
+            719,
+            1220
+          ],
+          "center_xy": [
+            361,
+            989
+          ],
+          "type": "text_region",
+          "text": null,
+          "recognition_attempted": false,
+          "recognition_status": "not_requested",
+          "recognition_error": null,
+          "polygon": [
+            [
+              0,
+              772
+            ],
+            [
+              719,
+              758
+            ],
+            [
+              719,
+              1206
+            ],
+            [
+              6,
+              1220
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "matching_debug": {
+    "selected_regions_kept_on_ocr_failure": true,
+    "all_detected_regions_drawn": true,
+    "raw_region_preview_available": true,
+    "raw_region_preview": "same-frame unannotated source; region bounding rectangle with detected polygon outline",
+    "recognition_threshold": 0.5
+  },
+  "models": {
+    "label": "YOLOv8n 640 · PP-OCRv6 tiny · CPU",
+    "execution_provider": "CPUExecutionProvider",
+    "checkpoint": "train9\/weights\/best.pt",
+    "yolo_file": "knob_640.onnx",
+    "yolo_input_size": 640,
+    "ocr_model": "V6_TINY",
+    "ocr_detection_file": "PP-OCRv6_det_tiny.onnx",
+    "ocr_recognition_file": "PP-OCRv6_rec_tiny.onnx",
+    "dictionary_file": "rec_character_dict_v6_tiny.txt",
+    "dictionary_classes": 6906,
+    "load_ms_outside_frame": 660.6838,
+    "first_inference_for_loaded_models": false,
+    "hand_model": "hand_landmarker.task",
+    "hand_backend": "MediaPipe CPU",
+    "hand_model_load_ms_outside_frame": 398.7008
+  },
+  "hand_landmarks": {
+    "completed": true,
+    "count": 0,
+    "frame_id": 2,
+    "camera_timestamp_ns": 188401359960,
+    "mediapipe_timestamp_ms": 191075,
+    "same_frame_as_cabinet": true,
+    "mode": "21_point_hand_landmarks",
+    "coordinate_system": "upright analysis frame pixels; normalized z is model-relative depth, not meters",
+    "hands": []
+  },
+  "execution": {
+    "mode": "PARALLEL",
+    "same_frame_only": true,
+    "all_branches_joined_before_publish": true,
+    "max_concurrent_model_tasks": 3,
+    "ort_intra_op_threads_per_session": 2,
+    "ort_inter_op_threads_per_session": 1,
+    "ocr_recognition_requires": "YOLO and whole-image text detection, then geometry matching",
+    "hand_inference_independent_of_cabinet": true
+  },
+  "video": {
+    "frame_id": 2,
+    "session_id": 2,
+    "camera_timestamp_ns": 188401359960,
+    "received_monotonic_ns": 188424204800,
+    "processing_ms": 4591.9969,
+    "receive_to_ui_submission_ms": 4603.3196,
+    "sensor_frame_width": 1280,
+    "sensor_frame_height": 720,
+    "rotation_degrees": 90,
+    "backpressure_strategy": "KEEP_ONLY_LATEST",
+    "max_concurrent_frames": 1,
+    "max_concurrent_inferences": 3,
+    "result_overlay_target": "live_preview_and_processed_frame",
+    "live_overlay": {
+      "mode": "latest_completed_result_over_live_preview",
+      "motion_compensation": false,
+      "tracking": false,
+      "age_reference": "analysis_frame_received_monotonic_ns",
+      "coordinate_mapping": "CameraX shared ViewPort; cropped rotated ImageProxy to PreviewView OutputTransform"
+    }
+  }
+}

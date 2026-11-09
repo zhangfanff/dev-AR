@@ -1,0 +1,31 @@
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting onnx==1.17.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/51/a5/19b0dfcb567b62e7adf1a21b08b23224f0c2d13842aee4d0abc6f07f9cf5/onnx-1.17.0-cp311-cp311-win_amd64.whl (14.5 MB)
+     ---------------------------------------- 14.5/14.5 MB 7.0 MB/s  0:00:02
+Collecting onnxruntime==1.19.2
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/1e/f5/9d995a685f97508b3254f17015b4a78641b0625e79480a7aed7a7a105d7c/onnxruntime-1.19.2-cp311-cp311-win_amd64.whl (11.1 MB)
+     ---------------------------------------- 11.1/11.1 MB 10.3 MB/s  0:00:01
+Collecting numpy<2
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/3f/6b/5610004206cf7f8e7ad91c5a85a8c71b2f2f8051a0c0c4d5916b76d6cbb2/numpy-1.26.4-cp311-cp311-win_amd64.whl (15.8 MB)
+     ---------------------------------------- 15.8/15.8 MB 15.5 MB/s  0:00:01
+Collecting protobuf>=3.20.2 (from onnx==1.17.0)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/8a/55/b77bda4e5e5f5971fb51b07663694690e9afdb9402136c16a522bd621cad/protobuf-7.36.2-cp310-abi3-win_amd64.whl (456 kB)
+Collecting coloredlogs (from onnxruntime==1.19.2)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/a7/06/3d6badcf13db419e25b07041d9c7b4a2c331d3f4e7134445ec5df57714cd/coloredlogs-15.0.1-py2.py3-none-any.whl (46 kB)
+Collecting flatbuffers (from onnxruntime==1.19.2)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/e8/2d/d2a548598be01649e2d46231d151a6c56d10b964d94043a335ae56ea2d92/flatbuffers-25.12.19-py2.py3-none-any.whl (26 kB)
+Collecting packaging (from onnxruntime==1.19.2)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/63/34/ba1c580383c9eada3711951fef0795c80b829a078d72188184bcab9dd527/packaging-26.3-py3-none-any.whl (129 kB)
+Collecting sympy (from onnxruntime==1.19.2)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/a2/09/77d55d46fd61b4a135c444fc97158ef34a095e5681d0a6c10b75bf356191/sympy-1.14.0-py3-none-any.whl (6.3 MB)
+     ---------------------------------------- 6.3/6.3 MB 16.1 MB/s  0:00:00
+Collecting humanfriendly>=9.1 (from coloredlogs->onnxruntime==1.19.2)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/f0/0f/310fb31e39e2d734ccaa2c0fb981ee41f7bd5056ce9bc29b2248bd569169/humanfriendly-10.0-py2.py3-none-any.whl (86 kB)
+Collecting pyreadline3 (from humanfriendly>=9.1->coloredlogs->onnxruntime==1.19.2)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/f7/5e/35c856e186b74678c24927847ad9895a51f1bc02a0c6126477a6c6040064/pyreadline3-3.5.6-py3-none-any.whl (85 kB)
+Collecting mpmath<1.4,>=1.1.0 (from sympy->onnxruntime==1.19.2)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/43/e3/7d92a15f894aa0c9c4b49b8ee9ac9850d6e63b03c9c32c0367a13ae62209/mpmath-1.3.0-py3-none-any.whl (536 kB)
+     ---------------------------------------- 536.2/536.2 kB 17.1 MB/s  0:00:00
+Installing collected packages: mpmath, flatbuffers, sympy, pyreadline3, protobuf, packaging, numpy, onnx, humanfriendly, coloredlogs, onnxruntime
+
+Successfully installed coloredlogs-15.0.1 flatbuffers-25.12.19 humanfriendly-10.0 mpmath-1.3.0 numpy-1.26.4 onnx-1.17.0 onnxruntime-1.19.2 packaging-26.3 protobuf-7.36.2 pyreadline3-3.5.6 sympy-1.14.0

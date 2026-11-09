@@ -1,0 +1,479 @@
+{
+  "image_size": {
+    "width": 720,
+    "height": 382
+  },
+  "processing_image_size": {
+    "width": 720,
+    "height": 382
+  },
+  "coordinate_system": "upright cropped analysis frame pixels; top-left origin; x right; y down",
+  "strategy": "match_before_recognition",
+  "algorithm": "knob-confidence-first one-to-one geometry matching, then OCR of assigned regions only",
+  "execution_order": [
+    "whole_image_text_detection",
+    "knob_detection",
+    "geometry_matching",
+    "selected_region_recognition",
+    "hand_landmarks_same_frame",
+    "combined_annotation"
+  ],
+  "matching_uses_recognition_confidence": false,
+  "retry_other_region_on_recognition_failure": false,
+  "elapsed_ms": 0,
+  "timings": {
+    "unit": "ms",
+    "clock": "System.nanoTime monotonic wall clock",
+    "models_reused": false,
+    "angle_classifier_enabled": false,
+    "detected_text_region_count": 0,
+    "recognition_attempt_count": 0,
+    "recognition_model_calls": 0,
+    "skipped_region_count": 0,
+    "scope": "pipeline.total is cabinet detection\/matching\/OCR only; hands.total is hand processing including optional reset; combined.total includes both tasks, bitmap conversion and annotations; camera.processing also includes camera frame conversion; excludes export and actual screen presentation",
+    "totals_note": "Parent totals include child stages. Do not sum all keys; other includes cleanup, scheduling and instrumentation overhead. Optional or reused stages are zero.",
+    "stages_ms": {},
+    "text_regions": []
+  },
+  "parameters": {
+    "max_distance_ratio_of_diagonal": 0.12269024360603677,
+    "max_distance_px": 100,
+    "processing_max_distance_px": 100,
+    "max_lateral_processing_px": null,
+    "max_horizontal_px": null,
+    "search_direction": "DOWN",
+    "sector_half_angle_degrees": 45,
+    "max_angle_from_downward_degrees": 45,
+    "sector_rule": "positive projection on selected axis and atan2(abs(perpendicular projection), forward projection) <= half angle; ALL uses union of four axes; closest available text wins once",
+    "below_rule": "dy > 0 and degrees(atan2(abs(dx), dy)) <= sector_half_angle_degrees; processing image coordinates",
+    "yolo_confidence": 0.25,
+    "ocr_confidence": 0.5,
+    "ocr_det_side": 1600,
+    "angle_classifier": true,
+    "yolo_input_size": 1280,
+    "ocr_model": "V4"
+  },
+  "summary": {
+    "knob_count": 0,
+    "text_region_count": 0,
+    "geometric_match_count": 0,
+    "recognized_match_count": 0,
+    "recognition_failed_match_count": 0,
+    "recognition_attempt_count": 0,
+    "recognition_model_calls": 0,
+    "skipped_region_count": 0,
+    "unmatched_knob_count": 0,
+    "unmatched_text_region_count": 0
+  },
+  "matches": [],
+  "knob_results": [],
+  "processing_order": [],
+  "unmatched_knobs": [],
+  "unmatched_text_regions": [],
+  "input_results": {
+    "knobs": {
+      "count": 0,
+      "detections": []
+    },
+    "ocr": {
+      "count": 0,
+      "text_regions": []
+    }
+  },
+  "models": {
+    "label": "YOLOv8n 1280 · PP-OCRv4 · CPU",
+    "execution_provider": "CPUExecutionProvider",
+    "checkpoint": "train9\/weights\/best.pt",
+    "yolo_file": "knob_1280.onnx",
+    "yolo_input_size": 1280,
+    "ocr_model": "V4",
+    "ocr_detection_file": "ch_PP-OCRv4_det_infer.onnx",
+    "ocr_recognition_file": "ch_PP-OCRv4_rec_infer.onnx",
+    "dictionary_file": "rec_character_dict.txt",
+    "dictionary_classes": 6625,
+    "load_ms_outside_frame": 0,
+    "first_inference_for_loaded_models": false,
+    "hand_model": "hand_landmarker.task",
+    "hand_backend": "MediaPipe CPU",
+    "hand_model_load_ms_outside_frame": 0
+  },
+  "hand_landmarks": {
+    "completed": true,
+    "count": 2,
+    "frame_id": 1,
+    "camera_timestamp_ns": 1234,
+    "mediapipe_timestamp_ms": 1000,
+    "same_frame_as_cabinet": true,
+    "mode": "21_point_hand_landmarks",
+    "coordinate_system": "upright analysis frame pixels; normalized z is model-relative depth, not meters",
+    "hands": [
+      {
+        "hand_index": 0,
+        "landmarks": [
+          {
+            "id": 0,
+            "x_normalized": 0.809451699256897,
+            "y_normalized": 0.9248515367507935,
+            "z_normalized": 4.6361824956875353E-7,
+            "x_px": 582.8052368164062,
+            "y_px": 353.29327392578125
+          },
+          {
+            "id": 1,
+            "x_normalized": 0.7103466391563416,
+            "y_normalized": 0.8815935850143433,
+            "z_normalized": -0.028033077716827393,
+            "x_px": 511.4495849609375,
+            "y_px": 336.76873779296875
+          },
+          {
+            "id": 2,
+            "x_normalized": 0.6406157612800598,
+            "y_normalized": 0.7581734657287598,
+            "z_normalized": -0.049962226301431656,
+            "x_px": 461.24334716796875,
+            "y_px": 289.62225341796875
+          },
+          {
+            "id": 3,
+            "x_normalized": 0.5943603515625,
+            "y_normalized": 0.6212579607963562,
+            "z_normalized": -0.06688550859689713,
+            "x_px": 427.939453125,
+            "y_px": 237.32054138183594
+          },
+          {
+            "id": 4,
+            "x_normalized": 0.5477031469345093,
+            "y_normalized": 0.5351976752281189,
+            "z_normalized": -0.08575613051652908,
+            "x_px": 394.34625244140625,
+            "y_px": 204.4455108642578
+          },
+          {
+            "id": 5,
+            "x_normalized": 0.6944358348846436,
+            "y_normalized": 0.5714284777641296,
+            "z_normalized": -0.06620253622531891,
+            "x_px": 499.9938049316406,
+            "y_px": 218.28567504882812
+          },
+          {
+            "id": 6,
+            "x_normalized": 0.6667327880859375,
+            "y_normalized": 0.3695601224899292,
+            "z_normalized": -0.09385860711336136,
+            "x_px": 480.047607421875,
+            "y_px": 141.17196655273438
+          },
+          {
+            "id": 7,
+            "x_normalized": 0.6519427299499512,
+            "y_normalized": 0.24184876680374146,
+            "z_normalized": -0.10915712267160416,
+            "x_px": 469.3987731933594,
+            "y_px": 92.38623046875
+          },
+          {
+            "id": 8,
+            "x_normalized": 0.6437735557556152,
+            "y_normalized": 0.13464713096618652,
+            "z_normalized": -0.11959555000066757,
+            "x_px": 463.5169677734375,
+            "y_px": 51.435203552246094
+          },
+          {
+            "id": 9,
+            "x_normalized": 0.7542665004730225,
+            "y_normalized": 0.545557975769043,
+            "z_normalized": -0.06650272011756897,
+            "x_px": 543.0718994140625,
+            "y_px": 208.4031524658203
+          },
+          {
+            "id": 10,
+            "x_normalized": 0.7457011938095093,
+            "y_normalized": 0.31773310899734497,
+            "z_normalized": -0.09269286692142487,
+            "x_px": 536.9048461914062,
+            "y_px": 121.3740463256836
+          },
+          {
+            "id": 11,
+            "x_normalized": 0.7409282326698303,
+            "y_normalized": 0.1692672073841095,
+            "z_normalized": -0.108026422560215,
+            "x_px": 533.4683227539062,
+            "y_px": 64.66007232666016
+          },
+          {
+            "id": 12,
+            "x_normalized": 0.737937867641449,
+            "y_normalized": 0.053948163986206055,
+            "z_normalized": -0.11935523897409439,
+            "x_px": 531.3152465820312,
+            "y_px": 20.608198165893555
+          },
+          {
+            "id": 13,
+            "x_normalized": 0.809056282043457,
+            "y_normalized": 0.5580158829689026,
+            "z_normalized": -0.06704630702733994,
+            "x_px": 582.5205078125,
+            "y_px": 213.1620635986328
+          },
+          {
+            "id": 14,
+            "x_normalized": 0.8177016973495483,
+            "y_normalized": 0.3492637872695923,
+            "z_normalized": -0.09557268768548965,
+            "x_px": 588.7452392578125,
+            "y_px": 133.41876220703125
+          },
+          {
+            "id": 15,
+            "x_normalized": 0.8237537741661072,
+            "y_normalized": 0.20802730321884155,
+            "z_normalized": -0.11748511344194412,
+            "x_px": 593.1027221679688,
+            "y_px": 79.4664306640625
+          },
+          {
+            "id": 16,
+            "x_normalized": 0.8262403607368469,
+            "y_normalized": 0.10238829255104065,
+            "z_normalized": -0.1310945302248001,
+            "x_px": 594.89306640625,
+            "y_px": 39.112327575683594
+          },
+          {
+            "id": 17,
+            "x_normalized": 0.8574115037918091,
+            "y_normalized": 0.5892190337181091,
+            "z_normalized": -0.06758939474821091,
+            "x_px": 617.3363037109375,
+            "y_px": 225.0816650390625
+          },
+          {
+            "id": 18,
+            "x_normalized": 0.880102813243866,
+            "y_normalized": 0.42564907670021057,
+            "z_normalized": -0.09368560463190079,
+            "x_px": 633.6740112304688,
+            "y_px": 162.5979461669922
+          },
+          {
+            "id": 19,
+            "x_normalized": 0.8938262462615967,
+            "y_normalized": 0.3236807584762573,
+            "z_normalized": -0.10964956134557724,
+            "x_px": 643.5548706054688,
+            "y_px": 123.64604949951172
+          },
+          {
+            "id": 20,
+            "x_normalized": 0.905045747756958,
+            "y_normalized": 0.23681151866912842,
+            "z_normalized": -0.1194818988442421,
+            "x_px": 651.6329345703125,
+            "y_px": 90.46199798583984
+          }
+        ]
+      },
+      {
+        "hand_index": 1,
+        "landmarks": [
+          {
+            "id": 0,
+            "x_normalized": 0.1906205117702484,
+            "y_normalized": 0.07231935858726501,
+            "z_normalized": 4.868094833909709E-7,
+            "x_px": 137.24676513671875,
+            "y_px": 27.625995635986328
+          },
+          {
+            "id": 1,
+            "x_normalized": 0.28882479667663574,
+            "y_normalized": 0.11705484986305237,
+            "z_normalized": -0.029137279838323593,
+            "x_px": 207.953857421875,
+            "y_px": 44.7149543762207
+          },
+          {
+            "id": 2,
+            "x_normalized": 0.3583785891532898,
+            "y_normalized": 0.23778946697711945,
+            "z_normalized": -0.05283723399043083,
+            "x_px": 258.0325927734375,
+            "y_px": 90.83557891845703
+          },
+          {
+            "id": 3,
+            "x_normalized": 0.404940664768219,
+            "y_normalized": 0.37490472197532654,
+            "z_normalized": -0.07043244689702988,
+            "x_px": 291.5572814941406,
+            "y_px": 143.21360778808594
+          },
+          {
+            "id": 4,
+            "x_normalized": 0.451529860496521,
+            "y_normalized": 0.46356406807899475,
+            "z_normalized": -0.0894811823964119,
+            "x_px": 325.10150146484375,
+            "y_px": 177.0814666748047
+          },
+          {
+            "id": 5,
+            "x_normalized": 0.30131858587265015,
+            "y_normalized": 0.42298802733421326,
+            "z_normalized": -0.07349617034196854,
+            "x_px": 216.9493865966797,
+            "y_px": 161.5814208984375
+          },
+          {
+            "id": 6,
+            "x_normalized": 0.3312951922416687,
+            "y_normalized": 0.6294901371002197,
+            "z_normalized": -0.1025889441370964,
+            "x_px": 238.53253173828125,
+            "y_px": 240.46522521972656
+          },
+          {
+            "id": 7,
+            "x_normalized": 0.3480771780014038,
+            "y_normalized": 0.7551814913749695,
+            "z_normalized": -0.11716688424348831,
+            "x_px": 250.61557006835938,
+            "y_px": 288.4793395996094
+          },
+          {
+            "id": 8,
+            "x_normalized": 0.3576109707355499,
+            "y_normalized": 0.8597375154495239,
+            "z_normalized": -0.12631843984127045,
+            "x_px": 257.4798889160156,
+            "y_px": 328.41973876953125
+          },
+          {
+            "id": 9,
+            "x_normalized": 0.2415953278541565,
+            "y_normalized": 0.44627103209495544,
+            "z_normalized": -0.07245796918869019,
+            "x_px": 173.94863891601562,
+            "y_px": 170.4755401611328
+          },
+          {
+            "id": 10,
+            "x_normalized": 0.25163277983665466,
+            "y_normalized": 0.6810745000839233,
+            "z_normalized": -0.1020469218492508,
+            "x_px": 181.17559814453125,
+            "y_px": 260.17047119140625
+          },
+          {
+            "id": 11,
+            "x_normalized": 0.2581927478313446,
+            "y_normalized": 0.8308980464935303,
+            "z_normalized": -0.11672775447368622,
+            "x_px": 185.89877319335938,
+            "y_px": 317.4030456542969
+          },
+          {
+            "id": 12,
+            "x_normalized": 0.2621777653694153,
+            "y_normalized": 0.9462352991104126,
+            "z_normalized": -0.12662489712238312,
+            "x_px": 188.7679901123047,
+            "y_px": 361.4618835449219
+          },
+          {
+            "id": 13,
+            "x_normalized": 0.18812112510204315,
+            "y_normalized": 0.4352695345878601,
+            "z_normalized": -0.07104017585515976,
+            "x_px": 135.44720458984375,
+            "y_px": 166.27296447753906
+          },
+          {
+            "id": 14,
+            "x_normalized": 0.17937320470809937,
+            "y_normalized": 0.6464710235595703,
+            "z_normalized": -0.10056908428668976,
+            "x_px": 129.14871215820312,
+            "y_px": 246.95193481445312
+          },
+          {
+            "id": 15,
+            "x_normalized": 0.17427372932434082,
+            "y_normalized": 0.7850487232208252,
+            "z_normalized": -0.11962316185235977,
+            "x_px": 125.47708129882812,
+            "y_px": 299.88861083984375
+          },
+          {
+            "id": 16,
+            "x_normalized": 0.17240700125694275,
+            "y_normalized": 0.8862404823303223,
+            "z_normalized": -0.13041651248931885,
+            "x_px": 124.13304138183594,
+            "y_px": 338.5438537597656
+          },
+          {
+            "id": 17,
+            "x_normalized": 0.14098206162452698,
+            "y_normalized": 0.40710678696632385,
+            "z_normalized": -0.06960400938987732,
+            "x_px": 101.50708770751953,
+            "y_px": 155.51478576660156
+          },
+          {
+            "id": 18,
+            "x_normalized": 0.12027718871831894,
+            "y_normalized": 0.5740216970443726,
+            "z_normalized": -0.09433890134096146,
+            "x_px": 86.59957885742188,
+            "y_px": 219.2762908935547
+          },
+          {
+            "id": 19,
+            "x_normalized": 0.10725279152393341,
+            "y_normalized": 0.675959587097168,
+            "z_normalized": -0.10743239521980286,
+            "x_px": 77.22200775146484,
+            "y_px": 258.216552734375
+          },
+          {
+            "id": 20,
+            "x_normalized": 0.09607504308223724,
+            "y_normalized": 0.7615360021591187,
+            "z_normalized": -0.11475102603435516,
+            "x_px": 69.17403411865234,
+            "y_px": 290.90673828125
+          }
+        ]
+      }
+    ]
+  },
+  "video": {
+    "frame_id": 1,
+    "session_id": 1,
+    "camera_timestamp_ns": 1234,
+    "received_monotonic_ns": 308390135100,
+    "processing_ms": 0.5242,
+    "receive_to_ui_submission_ms": 0,
+    "sensor_frame_width": 720,
+    "sensor_frame_height": 382,
+    "rotation_degrees": 0,
+    "backpressure_strategy": "KEEP_ONLY_LATEST",
+    "max_concurrent_inferences": 1,
+    "result_overlay_target": "live_preview_and_processed_frame",
+    "live_overlay": {
+      "mode": "latest_completed_result_over_live_preview",
+      "motion_compensation": false,
+      "tracking": false,
+      "age_reference": "analysis_frame_received_monotonic_ns",
+      "coordinate_mapping": "CameraX shared ViewPort; cropped rotated ImageProxy to PreviewView OutputTransform"
+    }
+  }
+}

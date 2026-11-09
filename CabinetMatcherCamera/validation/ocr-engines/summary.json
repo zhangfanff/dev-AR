@@ -1,0 +1,219 @@
+[
+  {
+    "ocr": "V4",
+    "knob_count": 3,
+    "text_region_count": 19,
+    "geometric_match_count": 3,
+    "recognized_match_count": 3,
+    "recognition_failed_match_count": 0,
+    "recognition_attempt_count": 3,
+    "recognition_model_calls": 3,
+    "skipped_region_count": 16,
+    "unmatched_knob_count": 0,
+    "unmatched_text_region_count": 16,
+    "pipeline_ms": 1257.378,
+    "texts": [
+      {
+        "text": "合闸/分闸转换把手",
+        "confidence": 0.9843269719017876,
+        "status": "recognized"
+      },
+      {
+        "text": "合闸/分闸转换把手",
+        "confidence": 0.9893036219808791,
+        "status": "recognized"
+      },
+      {
+        "text": "2KK49F42刀闸",
+        "confidence": 0.9920506596565246,
+        "status": "recognized"
+      }
+    ]
+  },
+  {
+    "ocr": "V6_TINY",
+    "knob_count": 3,
+    "text_region_count": 20,
+    "geometric_match_count": 3,
+    "recognized_match_count": 3,
+    "recognition_failed_match_count": 0,
+    "recognition_attempt_count": 3,
+    "recognition_model_calls": 3,
+    "skipped_region_count": 17,
+    "unmatched_knob_count": 0,
+    "unmatched_text_region_count": 17,
+    "pipeline_ms": 655.585,
+    "texts": [
+      {
+        "text": "合闸/分闸转换把手",
+        "confidence": 0.999596549404992,
+        "status": "recognized"
+      },
+      {
+        "text": "合闸/分闸转换把手",
+        "confidence": 0.9883951544761658,
+        "status": "recognized"
+      },
+      {
+        "text": "2KK 49F42刀闸",
+        "confidence": 0.953447862104936,
+        "status": "recognized"
+      }
+    ]
+  },
+  {
+    "ocr": "V5_MOBILE",
+    "knob_count": 3,
+    "text_region_count": 20,
+    "geometric_match_count": 3,
+    "recognized_match_count": 3,
+    "recognition_failed_match_count": 0,
+    "recognition_attempt_count": 3,
+    "recognition_model_calls": 3,
+    "skipped_region_count": 17,
+    "unmatched_knob_count": 0,
+    "unmatched_text_region_count": 17,
+    "pipeline_ms": 1202.214,
+    "texts": [
+      {
+        "text": "合闸/分闸转换把手",
+        "confidence": 0.9911495976977878,
+        "status": "recognized"
+      },
+      {
+        "text": "合闸/分闸转换把手",
+        "confidence": 0.9841396146350436,
+        "status": "recognized"
+      },
+      {
+        "text": "2KK49F42刀闸",
+        "confidence": 0.9840158343315124,
+        "status": "recognized"
+      }
+    ]
+  },
+  {
+    "ocr": "V5_SERVER",
+    "knob_count": 3,
+    "text_region_count": 19,
+    "geometric_match_count": 3,
+    "recognized_match_count": 3,
+    "recognition_failed_match_count": 0,
+    "recognition_attempt_count": 3,
+    "recognition_model_calls": 3,
+    "skipped_region_count": 16,
+    "unmatched_knob_count": 0,
+    "unmatched_text_region_count": 16,
+    "pipeline_ms": 10295.203,
+    "texts": [
+      {
+        "text": "合闸/分闸转换把手",
+        "confidence": 0.9869499405225118,
+        "status": "recognized"
+      },
+      {
+        "text": "合闸/分闸转换把手",
+        "confidence": 0.9929671751128303,
+        "status": "recognized"
+      },
+      {
+        "text": "2KK49F42刀闸",
+        "confidence": 0.9458386957645416,
+        "status": "recognized"
+      }
+    ]
+  },
+  {
+    "ocr": "V6_SMALL",
+    "knob_count": 3,
+    "text_region_count": 18,
+    "geometric_match_count": 3,
+    "recognized_match_count": 3,
+    "recognition_failed_match_count": 0,
+    "recognition_attempt_count": 3,
+    "recognition_model_calls": 3,
+    "skipped_region_count": 15,
+    "unmatched_knob_count": 0,
+    "unmatched_text_region_count": 15,
+    "pipeline_ms": 1119.114,
+    "texts": [
+      {
+        "text": "合闸/分闸转换把手",
+        "confidence": 0.9989647732840644,
+        "status": "recognized"
+      },
+      {
+        "text": "合闸/分闸转换把手",
+        "confidence": 0.9991269177860684,
+        "status": "recognized"
+      },
+      {
+        "text": "2KK 49F42刀闸",
+        "confidence": 0.9865525527433916,
+        "status": "recognized"
+      }
+    ]
+  },
+  {
+    "ocr": "ML_KIT_CHINESE",
+    "knob_count": 3,
+    "text_region_count": 16,
+    "geometric_match_count": 3,
+    "recognized_match_count": 0,
+    "recognition_failed_match_count": 3,
+    "recognition_attempt_count": 3,
+    "recognition_model_calls": 3,
+    "skipped_region_count": 13,
+    "unmatched_knob_count": 0,
+    "unmatched_text_region_count": 13,
+    "pipeline_ms": 1740.907,
+    "texts": [
+      {
+        "text": "合闻/分闸转换把手",
+        "confidence": 0.4539930555555556,
+        "status": "low_confidence"
+      },
+      {
+        "text": "合闸/分转换把手",
+        "confidence": 0.3935546875,
+        "status": "low_confidence"
+      },
+      {
+        "text": "2KK 491F42丁国",
+        "confidence": 0.490056832631429,
+        "status": "low_confidence"
+      }
+    ]
+  },
+  {
+    "ocr": "DBNET_CRNN",
+    "knob_count": 3,
+    "text_region_count": 19,
+    "geometric_match_count": 3,
+    "recognized_match_count": 3,
+    "recognition_failed_match_count": 0,
+    "recognition_attempt_count": 3,
+    "recognition_model_calls": 3,
+    "skipped_region_count": 16,
+    "unmatched_knob_count": 0,
+    "unmatched_text_region_count": 16,
+    "pipeline_ms": 1043.08,
+    "texts": [
+      {
+        "text": "合闸/分闸转换把手",
+        "confidence": 0.927384701040056,
+        "status": "recognized"
+      },
+      {
+        "text": "合闸/分闸转换把手",
+        "confidence": 0.9526161352793375,
+        "status": "recognized"
+      },
+      {
+        "text": "2KK49F42刀闸",
+        "confidence": 0.913964593410492,
+        "status": "recognized"
+      }
+    ]
+  }
+]

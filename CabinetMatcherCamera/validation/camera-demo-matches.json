@@ -1,0 +1,2516 @@
+{
+  "image_size": {
+    "width": 1706,
+    "height": 1279
+  },
+  "processing_image_size": {
+    "width": 1706,
+    "height": 1279
+  },
+  "coordinate_system": "upright cropped analysis frame pixels; top-left origin; x right; y down",
+  "strategy": "match_before_recognition",
+  "algorithm": "knob-confidence-first one-to-one geometry matching, then OCR of assigned regions only",
+  "execution_order": [
+    "whole_image_text_detection",
+    "knob_detection",
+    "geometry_matching",
+    "selected_region_recognition"
+  ],
+  "matching_uses_recognition_confidence": false,
+  "retry_other_region_on_recognition_failure": false,
+  "elapsed_ms": 3690,
+  "timings": {
+    "unit": "ms",
+    "clock": "System.nanoTime monotonic wall clock",
+    "models_reused": false,
+    "angle_classifier_enabled": false,
+    "detected_text_region_count": 19,
+    "recognition_attempt_count": 2,
+    "recognition_model_calls": 2,
+    "skipped_region_count": 17,
+    "scope": "image_load was measured during selection; analysis.total is button click to UI content update; pipeline.total preserves elapsed_ms scope; excludes gallery interaction, export and GPU frame presentation",
+    "totals_note": "Parent totals include child stages. Do not sum all keys; other includes cleanup, scheduling and instrumentation overhead. Optional or reused stages are zero.",
+    "stages_ms": {
+      "text_loop.crop": 1.203,
+      "text_loop.angle.model_load": 0,
+      "text_loop.angle.preprocess": 0,
+      "text_loop.angle.inference": 0,
+      "text_loop.angle.postprocess": 0,
+      "text_loop.recognition.preprocess": 4.479,
+      "text_loop.recognition.inference": 51.75,
+      "text_loop.recognition.postprocess": 42.973,
+      "text_loop.filter": 0.079,
+      "ocr_detection.preprocess": 173.832,
+      "ocr_detection.inference": 2007.672,
+      "ocr_detection.postprocess": 414.064,
+      "ocr_detection.total": 2596.651,
+      "ocr_detection.other": 1.083,
+      "yolo.preprocess": 159.427,
+      "yolo.inference": 803.265,
+      "yolo.postprocess": 23.827,
+      "yolo.total": 988.785,
+      "yolo.other": 2.266,
+      "region_prepare": 0.168,
+      "matching": 2.707,
+      "text_loop.total": 101.551,
+      "text_loop.other": 1.066,
+      "pipeline.total": 3690.245,
+      "pipeline.other": 0.383
+    },
+    "text_regions": [
+      {
+        "region_index": 15,
+        "text_id": 15,
+        "text": "4KK49F410地刀",
+        "confidence": 0.9656021378257058,
+        "accepted": true,
+        "recognition_status": "recognized",
+        "error": null,
+        "recognition_model_calls": 1,
+        "crop_width": 141,
+        "crop_height": 22,
+        "stages_ms": {
+          "crop": 0.749,
+          "angle.model_load": 0,
+          "angle.preprocess": 0,
+          "angle.inference": 0,
+          "angle.postprocess": 0,
+          "recognition.preprocess": 3.095,
+          "recognition.inference": 27.775,
+          "recognition.postprocess": 37.898,
+          "filter": 0.061,
+          "total": 69.931,
+          "other": 0.354
+        }
+      },
+      {
+        "region_index": 6,
+        "text_id": 6,
+        "text": "1KK49F41刀闸",
+        "confidence": 0.9866354703903198,
+        "accepted": true,
+        "recognition_status": "recognized",
+        "error": null,
+        "recognition_model_calls": 1,
+        "crop_width": 125,
+        "crop_height": 24,
+        "stages_ms": {
+          "crop": 0.454,
+          "angle.model_load": 0,
+          "angle.preprocess": 0,
+          "angle.inference": 0,
+          "angle.postprocess": 0,
+          "recognition.preprocess": 1.384,
+          "recognition.inference": 23.976,
+          "recognition.postprocess": 5.076,
+          "filter": 0.018,
+          "total": 31.127,
+          "other": 0.219
+        }
+      }
+    ]
+  },
+  "parameters": {
+    "max_distance_ratio_of_diagonal": 0.12,
+    "max_distance_px": 255.86400450239182,
+    "processing_max_distance_px": 255.86400450239185,
+    "max_horizontal_px": null,
+    "max_angle_from_downward_degrees": 45,
+    "below_rule": "dy > 0 and degrees(atan2(abs(dx), dy)) <= max_angle_from_downward_degrees; processing image coordinates",
+    "yolo_confidence": 0.25,
+    "ocr_confidence": 0.5,
+    "ocr_det_side": 1600,
+    "angle_classifier": false
+  },
+  "summary": {
+    "knob_count": 2,
+    "text_region_count": 19,
+    "geometric_match_count": 2,
+    "recognized_match_count": 2,
+    "recognition_failed_match_count": 0,
+    "recognition_attempt_count": 2,
+    "recognition_model_calls": 2,
+    "skipped_region_count": 17,
+    "unmatched_knob_count": 0,
+    "unmatched_text_region_count": 17
+  },
+  "matches": [
+    {
+      "processing_rank": 1,
+      "knob": {
+        "id": 1,
+        "confidence": 0.9327493906021118,
+        "bbox_xyxy": [
+          496.7831,
+          909.019,
+          683.343,
+          1145.4126
+        ],
+        "center_xy": [
+          590.063,
+          1027.2158
+        ],
+        "class_id": 0,
+        "class_name": "knob"
+      },
+      "text_region": {
+        "id": 15,
+        "confidence": 0.9656021378257058,
+        "bbox_xyxy": [
+          523,
+          1099,
+          664,
+          1123
+        ],
+        "center_xy": [
+          593.25,
+          1111
+        ],
+        "type": "text_region",
+        "text": "4KK49F410地刀",
+        "recognition_attempted": true,
+        "recognition_status": "recognized",
+        "recognition_error": null,
+        "polygon": [
+          [
+            523,
+            1099
+          ],
+          [
+            664,
+            1101
+          ],
+          [
+            663,
+            1123
+          ],
+          [
+            523,
+            1121
+          ]
+        ]
+      },
+      "recognition_status": "recognized",
+      "dx_px": 3.187,
+      "dy_px": 83.7842,
+      "distance_px": 83.8448
+    },
+    {
+      "processing_rank": 2,
+      "knob": {
+        "id": 0,
+        "confidence": 0.40592342615127563,
+        "bbox_xyxy": [
+          676.8803,
+          155.9019,
+          859.8506,
+          346.255
+        ],
+        "center_xy": [
+          768.3654,
+          251.0785
+        ],
+        "class_id": 0,
+        "class_name": "knob"
+      },
+      "text_region": {
+        "id": 6,
+        "confidence": 0.9866354703903198,
+        "bbox_xyxy": [
+          708,
+          372,
+          834,
+          401
+        ],
+        "center_xy": [
+          771,
+          386.5
+        ],
+        "type": "text_region",
+        "text": "1KK49F41刀闸",
+        "recognition_attempted": true,
+        "recognition_status": "recognized",
+        "recognition_error": null,
+        "polygon": [
+          [
+            709,
+            372
+          ],
+          [
+            834,
+            377
+          ],
+          [
+            833,
+            401
+          ],
+          [
+            708,
+            396
+          ]
+        ]
+      },
+      "recognition_status": "recognized",
+      "dx_px": 2.6346,
+      "dy_px": 135.4215,
+      "distance_px": 135.4471
+    }
+  ],
+  "knob_results": [
+    {
+      "processing_rank": 1,
+      "knob": {
+        "id": 1,
+        "confidence": 0.9327493906021118,
+        "bbox_xyxy": [
+          496.7831,
+          909.019,
+          683.343,
+          1145.4126
+        ],
+        "center_xy": [
+          590.063,
+          1027.2158
+        ],
+        "class_id": 0,
+        "class_name": "knob"
+      },
+      "status": "geometrically_matched",
+      "matched_region_id": 15,
+      "recognition_status": "recognized",
+      "reason": null,
+      "candidate_evaluations": [
+        {
+          "region_id": 0,
+          "text": null,
+          "dx_px": 983.437,
+          "dy_px": -962.2158,
+          "distance_px": 1375.8661,
+          "processing_distance_px": 1375.8661,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 134.3751,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "not_below",
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字中心没有位于旋钮中心下方",
+            "文字与旋钮距离超出阈值"
+          ]
+        },
+        {
+          "region_id": 1,
+          "text": null,
+          "dx_px": 126.937,
+          "dy_px": -818.2158,
+          "distance_px": 828.0037,
+          "processing_distance_px": 828.0037,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 171.1815,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "not_below",
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字中心没有位于旋钮中心下方",
+            "文字与旋钮距离超出阈值"
+          ]
+        },
+        {
+          "region_id": 2,
+          "text": null,
+          "dx_px": 308.437,
+          "dy_px": -775.2158,
+          "distance_px": 834.3218,
+          "processing_distance_px": 834.3218,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 158.3038,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "not_below",
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字中心没有位于旋钮中心下方",
+            "文字与旋钮距离超出阈值"
+          ]
+        },
+        {
+          "region_id": 3,
+          "text": null,
+          "dx_px": 233.937,
+          "dy_px": -812.7158,
+          "distance_px": 845.7147,
+          "processing_distance_px": 845.7147,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 163.9417,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "not_below",
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字中心没有位于旋钮中心下方",
+            "文字与旋钮距离超出阈值"
+          ]
+        },
+        {
+          "region_id": 4,
+          "text": null,
+          "dx_px": 585.937,
+          "dy_px": -799.2158,
+          "distance_px": 990.9934,
+          "processing_distance_px": 990.9934,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 143.7534,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "not_below",
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字中心没有位于旋钮中心下方",
+            "文字与旋钮距离超出阈值"
+          ]
+        },
+        {
+          "region_id": 5,
+          "text": null,
+          "dx_px": 754.437,
+          "dy_px": -756.7158,
+          "distance_px": 1068.5476,
+          "processing_distance_px": 1068.5476,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 135.0864,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "not_below",
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字中心没有位于旋钮中心下方",
+            "文字与旋钮距离超出阈值"
+          ]
+        },
+        {
+          "region_id": 6,
+          "text": "1KK49F41刀闸",
+          "dx_px": 180.937,
+          "dy_px": -640.7158,
+          "distance_px": 665.7739,
+          "processing_distance_px": 665.7739,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 164.2304,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "not_below",
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字中心没有位于旋钮中心下方",
+            "文字与旋钮距离超出阈值"
+          ]
+        },
+        {
+          "region_id": 7,
+          "text": null,
+          "dx_px": 179.687,
+          "dy_px": -621.2158,
+          "distance_px": 646.6811,
+          "processing_distance_px": 646.6811,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 163.8675,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "not_below",
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字中心没有位于旋钮中心下方",
+            "文字与旋钮距离超出阈值"
+          ]
+        },
+        {
+          "region_id": 8,
+          "text": null,
+          "dx_px": 633.437,
+          "dy_px": -623.4658,
+          "distance_px": 888.7924,
+          "processing_distance_px": 888.7924,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 134.5455,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "not_below",
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字中心没有位于旋钮中心下方",
+            "文字与旋钮距离超出阈值"
+          ]
+        },
+        {
+          "region_id": 9,
+          "text": null,
+          "dx_px": 633.937,
+          "dy_px": -604.2158,
+          "distance_px": 875.7584,
+          "processing_distance_px": 875.7584,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 133.6249,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "not_below",
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字中心没有位于旋钮中心下方",
+            "文字与旋钮距离超出阈值"
+          ]
+        },
+        {
+          "region_id": 10,
+          "text": null,
+          "dx_px": 249.437,
+          "dy_px": -543.2158,
+          "distance_px": 597.7476,
+          "processing_distance_px": 597.7476,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 155.3361,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "not_below",
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字中心没有位于旋钮中心下方",
+            "文字与旋钮距离超出阈值"
+          ]
+        },
+        {
+          "region_id": 11,
+          "text": null,
+          "dx_px": 703.437,
+          "dy_px": -528.2158,
+          "distance_px": 879.6792,
+          "processing_distance_px": 879.6792,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 126.9031,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "not_below",
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字中心没有位于旋钮中心下方",
+            "文字与旋钮距离超出阈值"
+          ]
+        },
+        {
+          "region_id": 12,
+          "text": null,
+          "dx_px": 140.937,
+          "dy_px": -54.7158,
+          "distance_px": 151.1855,
+          "processing_distance_px": 151.1855,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 111.2176,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "not_below"
+          ],
+          "rejection_reason_descriptions": [
+            "文字中心没有位于旋钮中心下方"
+          ]
+        },
+        {
+          "region_id": 13,
+          "text": null,
+          "dx_px": 59.937,
+          "dy_px": -76.2158,
+          "distance_px": 96.9602,
+          "processing_distance_px": 96.9602,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 141.8181,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "not_below"
+          ],
+          "rejection_reason_descriptions": [
+            "文字中心没有位于旋钮中心下方"
+          ]
+        },
+        {
+          "region_id": 14,
+          "text": null,
+          "dx_px": 381.437,
+          "dy_px": 8.2842,
+          "distance_px": 381.5269,
+          "processing_distance_px": 381.5269,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 88.7558,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "outside_downward_sector",
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字偏向侧面，超出向下搜索扇区",
+            "文字与旋钮距离超出阈值"
+          ]
+        },
+        {
+          "region_id": 15,
+          "text": "4KK49F410地刀",
+          "dx_px": 3.187,
+          "dy_px": 83.7842,
+          "distance_px": 83.8448,
+          "processing_distance_px": 83.8448,
+          "geometrically_eligible": true,
+          "processing_angle_from_downward_degrees": 2.1784,
+          "available": true,
+          "selected": true,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [],
+          "rejection_reason_descriptions": []
+        },
+        {
+          "region_id": 16,
+          "text": null,
+          "dx_px": 3.937,
+          "dy_px": 103.7842,
+          "distance_px": 103.8589,
+          "processing_distance_px": 103.8589,
+          "geometrically_eligible": true,
+          "processing_angle_from_downward_degrees": 2.1724,
+          "available": true,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [],
+          "rejection_reason_descriptions": []
+        },
+        {
+          "region_id": 17,
+          "text": null,
+          "dx_px": -239.063,
+          "dy_px": 142.7842,
+          "distance_px": 278.4573,
+          "processing_distance_px": 278.4573,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 59.1516,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "outside_downward_sector",
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字偏向侧面，超出向下搜索扇区",
+            "文字与旋钮距离超出阈值"
+          ]
+        },
+        {
+          "region_id": 18,
+          "text": null,
+          "dx_px": 93.937,
+          "dy_px": 154.2842,
+          "distance_px": 180.6316,
+          "processing_distance_px": 180.6316,
+          "geometrically_eligible": true,
+          "processing_angle_from_downward_degrees": 31.3354,
+          "available": true,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [],
+          "rejection_reason_descriptions": []
+        }
+      ]
+    },
+    {
+      "processing_rank": 2,
+      "knob": {
+        "id": 0,
+        "confidence": 0.40592342615127563,
+        "bbox_xyxy": [
+          676.8803,
+          155.9019,
+          859.8506,
+          346.255
+        ],
+        "center_xy": [
+          768.3654,
+          251.0785
+        ],
+        "class_id": 0,
+        "class_name": "knob"
+      },
+      "status": "geometrically_matched",
+      "matched_region_id": 6,
+      "recognition_status": "recognized",
+      "reason": null,
+      "candidate_evaluations": [
+        {
+          "region_id": 0,
+          "text": null,
+          "dx_px": 805.1346,
+          "dy_px": -186.0785,
+          "distance_px": 826.3576,
+          "processing_distance_px": 826.3576,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 103.0134,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "not_below",
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字中心没有位于旋钮中心下方",
+            "文字与旋钮距离超出阈值"
+          ]
+        },
+        {
+          "region_id": 1,
+          "text": null,
+          "dx_px": -51.3654,
+          "dy_px": -42.0785,
+          "distance_px": 66.4003,
+          "processing_distance_px": 66.4003,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 129.3243,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "not_below"
+          ],
+          "rejection_reason_descriptions": [
+            "文字中心没有位于旋钮中心下方"
+          ]
+        },
+        {
+          "region_id": 2,
+          "text": null,
+          "dx_px": 130.1346,
+          "dy_px": 0.9215,
+          "distance_px": 130.1378,
+          "processing_distance_px": 130.1378,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 89.5943,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "outside_downward_sector"
+          ],
+          "rejection_reason_descriptions": [
+            "文字偏向侧面，超出向下搜索扇区"
+          ]
+        },
+        {
+          "region_id": 3,
+          "text": null,
+          "dx_px": 55.6346,
+          "dy_px": -36.5785,
+          "distance_px": 66.5822,
+          "processing_distance_px": 66.5822,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 123.324,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "not_below"
+          ],
+          "rejection_reason_descriptions": [
+            "文字中心没有位于旋钮中心下方"
+          ]
+        },
+        {
+          "region_id": 4,
+          "text": null,
+          "dx_px": 407.6346,
+          "dy_px": -23.0785,
+          "distance_px": 408.2873,
+          "processing_distance_px": 408.2873,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 93.2404,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "not_below",
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字中心没有位于旋钮中心下方",
+            "文字与旋钮距离超出阈值"
+          ]
+        },
+        {
+          "region_id": 5,
+          "text": null,
+          "dx_px": 576.1346,
+          "dy_px": 19.4215,
+          "distance_px": 576.4618,
+          "processing_distance_px": 576.4618,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 88.0693,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "outside_downward_sector",
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字偏向侧面，超出向下搜索扇区",
+            "文字与旋钮距离超出阈值"
+          ]
+        },
+        {
+          "region_id": 6,
+          "text": "1KK49F41刀闸",
+          "dx_px": 2.6346,
+          "dy_px": 135.4215,
+          "distance_px": 135.4471,
+          "processing_distance_px": 135.4471,
+          "geometrically_eligible": true,
+          "processing_angle_from_downward_degrees": 1.1145,
+          "available": true,
+          "selected": true,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [],
+          "rejection_reason_descriptions": []
+        },
+        {
+          "region_id": 7,
+          "text": null,
+          "dx_px": 1.3846,
+          "dy_px": 154.9215,
+          "distance_px": 154.9277,
+          "processing_distance_px": 154.9277,
+          "geometrically_eligible": true,
+          "processing_angle_from_downward_degrees": 0.5121,
+          "available": true,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [],
+          "rejection_reason_descriptions": []
+        },
+        {
+          "region_id": 8,
+          "text": null,
+          "dx_px": 455.1346,
+          "dy_px": 152.6715,
+          "distance_px": 480.0584,
+          "processing_distance_px": 480.0584,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 71.4564,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "outside_downward_sector",
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字偏向侧面，超出向下搜索扇区",
+            "文字与旋钮距离超出阈值"
+          ]
+        },
+        {
+          "region_id": 9,
+          "text": null,
+          "dx_px": 455.6346,
+          "dy_px": 171.9215,
+          "distance_px": 486.9906,
+          "processing_distance_px": 486.9906,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 69.3273,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "outside_downward_sector",
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字偏向侧面，超出向下搜索扇区",
+            "文字与旋钮距离超出阈值"
+          ]
+        },
+        {
+          "region_id": 10,
+          "text": null,
+          "dx_px": 71.1346,
+          "dy_px": 232.9215,
+          "distance_px": 243.5417,
+          "processing_distance_px": 243.5417,
+          "geometrically_eligible": true,
+          "processing_angle_from_downward_degrees": 16.9827,
+          "available": true,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [],
+          "rejection_reason_descriptions": []
+        },
+        {
+          "region_id": 11,
+          "text": null,
+          "dx_px": 525.1346,
+          "dy_px": 247.9215,
+          "distance_px": 580.7163,
+          "processing_distance_px": 580.7163,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 64.7275,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "outside_downward_sector",
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字偏向侧面，超出向下搜索扇区",
+            "文字与旋钮距离超出阈值"
+          ]
+        },
+        {
+          "region_id": 12,
+          "text": null,
+          "dx_px": -37.3654,
+          "dy_px": 721.4215,
+          "distance_px": 722.3885,
+          "processing_distance_px": 722.3885,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 2.9649,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字与旋钮距离超出阈值"
+          ]
+        },
+        {
+          "region_id": 13,
+          "text": null,
+          "dx_px": -118.3654,
+          "dy_px": 699.9215,
+          "distance_px": 709.8595,
+          "processing_distance_px": 709.8595,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 9.5986,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字与旋钮距离超出阈值"
+          ]
+        },
+        {
+          "region_id": 14,
+          "text": null,
+          "dx_px": 203.1346,
+          "dy_px": 784.4215,
+          "distance_px": 810.2967,
+          "processing_distance_px": 810.2967,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 14.5184,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字与旋钮距离超出阈值"
+          ]
+        },
+        {
+          "region_id": 15,
+          "text": "4KK49F410地刀",
+          "dx_px": -175.1154,
+          "dy_px": 859.9215,
+          "distance_px": 877.5708,
+          "processing_distance_px": 877.5708,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 11.5104,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": 1,
+          "rejection_reasons": [
+            "distance_exceeded",
+            "text_already_used"
+          ],
+          "rejection_reason_descriptions": [
+            "文字与旋钮距离超出阈值",
+            "文字已被其他旋钮占用"
+          ]
+        },
+        {
+          "region_id": 16,
+          "text": null,
+          "dx_px": -174.3654,
+          "dy_px": 879.9215,
+          "distance_px": 897.0313,
+          "processing_distance_px": 897.0313,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 11.2085,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字与旋钮距离超出阈值"
+          ]
+        },
+        {
+          "region_id": 17,
+          "text": null,
+          "dx_px": -417.3654,
+          "dy_px": 918.9215,
+          "distance_px": 1009.2624,
+          "processing_distance_px": 1009.2624,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 24.4271,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字与旋钮距离超出阈值"
+          ]
+        },
+        {
+          "region_id": 18,
+          "text": null,
+          "dx_px": -84.3654,
+          "dy_px": 930.4215,
+          "distance_px": 934.2386,
+          "processing_distance_px": 934.2386,
+          "geometrically_eligible": false,
+          "processing_angle_from_downward_degrees": 5.1811,
+          "available": false,
+          "selected": false,
+          "occupied_by_knob_id": null,
+          "rejection_reasons": [
+            "distance_exceeded"
+          ],
+          "rejection_reason_descriptions": [
+            "文字与旋钮距离超出阈值"
+          ]
+        }
+      ]
+    }
+  ],
+  "processing_order": [
+    1,
+    0
+  ],
+  "unmatched_knobs": [],
+  "unmatched_text_regions": [
+    {
+      "text_region": {
+        "id": 0,
+        "confidence": null,
+        "bbox_xyxy": [
+          1526,
+          33,
+          1621,
+          97
+        ],
+        "center_xy": [
+          1573.5,
+          65
+        ],
+        "type": "text_region",
+        "text": null,
+        "recognition_attempted": false,
+        "recognition_status": "not_requested",
+        "recognition_error": null,
+        "polygon": [
+          [
+            1529,
+            33
+          ],
+          [
+            1621,
+            38
+          ],
+          [
+            1618,
+            97
+          ],
+          [
+            1526,
+            92
+          ]
+        ]
+      },
+      "reason": "not_assigned_recognition_skipped",
+      "reason_description": "未被几何匹配选中，跳过文字识别"
+    },
+    {
+      "text_region": {
+        "id": 1,
+        "confidence": null,
+        "bbox_xyxy": [
+          697,
+          196,
+          737,
+          222
+        ],
+        "center_xy": [
+          717,
+          209
+        ],
+        "type": "text_region",
+        "text": null,
+        "recognition_attempted": false,
+        "recognition_status": "not_requested",
+        "recognition_error": null,
+        "polygon": [
+          [
+            697,
+            196
+          ],
+          [
+            737,
+            196
+          ],
+          [
+            737,
+            222
+          ],
+          [
+            697,
+            222
+          ]
+        ]
+      },
+      "reason": "not_assigned_recognition_skipped",
+      "reason_description": "未被几何匹配选中，跳过文字识别"
+    },
+    {
+      "text_region": {
+        "id": 2,
+        "confidence": null,
+        "bbox_xyxy": [
+          867,
+          190,
+          930,
+          314
+        ],
+        "center_xy": [
+          898.5,
+          252
+        ],
+        "type": "text_region",
+        "text": null,
+        "recognition_attempted": false,
+        "recognition_status": "not_requested",
+        "recognition_error": null,
+        "polygon": [
+          [
+            867,
+            190
+          ],
+          [
+            930,
+            190
+          ],
+          [
+            930,
+            314
+          ],
+          [
+            867,
+            314
+          ]
+        ]
+      },
+      "reason": "not_assigned_recognition_skipped",
+      "reason_description": "未被几何匹配选中，跳过文字识别"
+    },
+    {
+      "text_region": {
+        "id": 3,
+        "confidence": null,
+        "bbox_xyxy": [
+          806,
+          202,
+          842,
+          227
+        ],
+        "center_xy": [
+          824,
+          214.5
+        ],
+        "type": "text_region",
+        "text": null,
+        "recognition_attempted": false,
+        "recognition_status": "not_requested",
+        "recognition_error": null,
+        "polygon": [
+          [
+            806,
+            202
+          ],
+          [
+            842,
+            202
+          ],
+          [
+            842,
+            227
+          ],
+          [
+            806,
+            227
+          ]
+        ]
+      },
+      "reason": "not_assigned_recognition_skipped",
+      "reason_description": "未被几何匹配选中，跳过文字识别"
+    },
+    {
+      "text_region": {
+        "id": 4,
+        "confidence": null,
+        "bbox_xyxy": [
+          1159,
+          217,
+          1193,
+          239
+        ],
+        "center_xy": [
+          1176,
+          228
+        ],
+        "type": "text_region",
+        "text": null,
+        "recognition_attempted": false,
+        "recognition_status": "not_requested",
+        "recognition_error": null,
+        "polygon": [
+          [
+            1159,
+            217
+          ],
+          [
+            1193,
+            217
+          ],
+          [
+            1193,
+            239
+          ],
+          [
+            1159,
+            239
+          ]
+        ]
+      },
+      "reason": "not_assigned_recognition_skipped",
+      "reason_description": "未被几何匹配选中，跳过文字识别"
+    },
+    {
+      "text_region": {
+        "id": 5,
+        "confidence": null,
+        "bbox_xyxy": [
+          1314,
+          210,
+          1375,
+          331
+        ],
+        "center_xy": [
+          1344.5,
+          270.5
+        ],
+        "type": "text_region",
+        "text": null,
+        "recognition_attempted": false,
+        "recognition_status": "not_requested",
+        "recognition_error": null,
+        "polygon": [
+          [
+            1314,
+            210
+          ],
+          [
+            1375,
+            210
+          ],
+          [
+            1375,
+            331
+          ],
+          [
+            1314,
+            331
+          ]
+        ]
+      },
+      "reason": "not_assigned_recognition_skipped",
+      "reason_description": "未被几何匹配选中，跳过文字识别"
+    },
+    {
+      "text_region": {
+        "id": 7,
+        "confidence": null,
+        "bbox_xyxy": [
+          689,
+          390,
+          850,
+          422
+        ],
+        "center_xy": [
+          769.75,
+          406
+        ],
+        "type": "text_region",
+        "text": null,
+        "recognition_attempted": false,
+        "recognition_status": "not_requested",
+        "recognition_error": null,
+        "polygon": [
+          [
+            690,
+            390
+          ],
+          [
+            850,
+            396
+          ],
+          [
+            850,
+            422
+          ],
+          [
+            689,
+            416
+          ]
+        ]
+      },
+      "reason": "not_assigned_recognition_skipped",
+      "reason_description": "未被几何匹配选中，跳过文字识别"
+    },
+    {
+      "text_region": {
+        "id": 8,
+        "confidence": null,
+        "bbox_xyxy": [
+          1160,
+          391,
+          1287,
+          417
+        ],
+        "center_xy": [
+          1223.5,
+          403.75
+        ],
+        "type": "text_region",
+        "text": null,
+        "recognition_attempted": false,
+        "recognition_status": "not_requested",
+        "recognition_error": null,
+        "polygon": [
+          [
+            1161,
+            391
+          ],
+          [
+            1287,
+            393
+          ],
+          [
+            1286,
+            417
+          ],
+          [
+            1160,
+            414
+          ]
+        ]
+      },
+      "reason": "not_assigned_recognition_skipped",
+      "reason_description": "未被几何匹配选中，跳过文字识别"
+    },
+    {
+      "text_region": {
+        "id": 9,
+        "confidence": null,
+        "bbox_xyxy": [
+          1144,
+          409,
+          1304,
+          437
+        ],
+        "center_xy": [
+          1224,
+          423
+        ],
+        "type": "text_region",
+        "text": null,
+        "recognition_attempted": false,
+        "recognition_status": "not_requested",
+        "recognition_error": null,
+        "polygon": [
+          [
+            1145,
+            409
+          ],
+          [
+            1304,
+            410
+          ],
+          [
+            1303,
+            437
+          ],
+          [
+            1144,
+            436
+          ]
+        ]
+      },
+      "reason": "not_assigned_recognition_skipped",
+      "reason_description": "未被几何匹配选中，跳过文字识别"
+    },
+    {
+      "text_region": {
+        "id": 10,
+        "confidence": null,
+        "bbox_xyxy": [
+          788,
+          448,
+          891,
+          520
+        ],
+        "center_xy": [
+          839.5,
+          484
+        ],
+        "type": "text_region",
+        "text": null,
+        "recognition_attempted": false,
+        "recognition_status": "not_requested",
+        "recognition_error": null,
+        "polygon": [
+          [
+            788,
+            448
+          ],
+          [
+            891,
+            448
+          ],
+          [
+            891,
+            520
+          ],
+          [
+            788,
+            520
+          ]
+        ]
+      },
+      "reason": "not_assigned_recognition_skipped",
+      "reason_description": "未被几何匹配选中，跳过文字识别"
+    },
+    {
+      "text_region": {
+        "id": 11,
+        "confidence": null,
+        "bbox_xyxy": [
+          1238,
+          463,
+          1349,
+          535
+        ],
+        "center_xy": [
+          1293.5,
+          499
+        ],
+        "type": "text_region",
+        "text": null,
+        "recognition_attempted": false,
+        "recognition_status": "not_requested",
+        "recognition_error": null,
+        "polygon": [
+          [
+            1238,
+            463
+          ],
+          [
+            1349,
+            463
+          ],
+          [
+            1349,
+            535
+          ],
+          [
+            1238,
+            535
+          ]
+        ]
+      },
+      "reason": "not_assigned_recognition_skipped",
+      "reason_description": "未被几何匹配选中，跳过文字识别"
+    },
+    {
+      "text_region": {
+        "id": 12,
+        "confidence": null,
+        "bbox_xyxy": [
+          699,
+          906,
+          763,
+          1039
+        ],
+        "center_xy": [
+          731,
+          972.5
+        ],
+        "type": "text_region",
+        "text": null,
+        "recognition_attempted": false,
+        "recognition_status": "not_requested",
+        "recognition_error": null,
+        "polygon": [
+          [
+            699,
+            906
+          ],
+          [
+            763,
+            906
+          ],
+          [
+            763,
+            1039
+          ],
+          [
+            699,
+            1039
+          ]
+        ]
+      },
+      "reason": "not_assigned_recognition_skipped",
+      "reason_description": "未被几何匹配选中，跳过文字识别"
+    },
+    {
+      "text_region": {
+        "id": 13,
+        "confidence": null,
+        "bbox_xyxy": [
+          632,
+          938,
+          668,
+          964
+        ],
+        "center_xy": [
+          650,
+          951
+        ],
+        "type": "text_region",
+        "text": null,
+        "recognition_attempted": false,
+        "recognition_status": "not_requested",
+        "recognition_error": null,
+        "polygon": [
+          [
+            632,
+            938
+          ],
+          [
+            668,
+            938
+          ],
+          [
+            668,
+            964
+          ],
+          [
+            632,
+            964
+          ]
+        ]
+      },
+      "reason": "not_assigned_recognition_skipped",
+      "reason_description": "未被几何匹配选中，跳过文字识别"
+    },
+    {
+      "text_region": {
+        "id": 14,
+        "confidence": null,
+        "bbox_xyxy": [
+          899,
+          996,
+          1044,
+          1075
+        ],
+        "center_xy": [
+          971.5,
+          1035.5
+        ],
+        "type": "text_region",
+        "text": null,
+        "recognition_attempted": false,
+        "recognition_status": "not_requested",
+        "recognition_error": null,
+        "polygon": [
+          [
+            901,
+            996
+          ],
+          [
+            1044,
+            1000
+          ],
+          [
+            1042,
+            1075
+          ],
+          [
+            899,
+            1071
+          ]
+        ]
+      },
+      "reason": "not_assigned_recognition_skipped",
+      "reason_description": "未被几何匹配选中，跳过文字识别"
+    },
+    {
+      "text_region": {
+        "id": 16,
+        "confidence": null,
+        "bbox_xyxy": [
+          512,
+          1118,
+          676,
+          1144
+        ],
+        "center_xy": [
+          594,
+          1131
+        ],
+        "type": "text_region",
+        "text": null,
+        "recognition_attempted": false,
+        "recognition_status": "not_requested",
+        "recognition_error": null,
+        "polygon": [
+          [
+            512,
+            1118
+          ],
+          [
+            676,
+            1120
+          ],
+          [
+            676,
+            1144
+          ],
+          [
+            512,
+            1142
+          ]
+        ]
+      },
+      "reason": "not_assigned_recognition_skipped",
+      "reason_description": "未被几何匹配选中，跳过文字识别"
+    },
+    {
+      "text_region": {
+        "id": 17,
+        "confidence": null,
+        "bbox_xyxy": [
+          267,
+          1130,
+          435,
+          1210
+        ],
+        "center_xy": [
+          351,
+          1170
+        ],
+        "type": "text_region",
+        "text": null,
+        "recognition_attempted": false,
+        "recognition_status": "not_requested",
+        "recognition_error": null,
+        "polygon": [
+          [
+            270,
+            1130
+          ],
+          [
+            435,
+            1137
+          ],
+          [
+            432,
+            1210
+          ],
+          [
+            267,
+            1203
+          ]
+        ]
+      },
+      "reason": "not_assigned_recognition_skipped",
+      "reason_description": "未被几何匹配选中，跳过文字识别"
+    },
+    {
+      "text_region": {
+        "id": 18,
+        "confidence": null,
+        "bbox_xyxy": [
+          603,
+          1143,
+          765,
+          1220
+        ],
+        "center_xy": [
+          684,
+          1181.5
+        ],
+        "type": "text_region",
+        "text": null,
+        "recognition_attempted": false,
+        "recognition_status": "not_requested",
+        "recognition_error": null,
+        "polygon": [
+          [
+            605,
+            1143
+          ],
+          [
+            765,
+            1148
+          ],
+          [
+            763,
+            1220
+          ],
+          [
+            603,
+            1215
+          ]
+        ]
+      },
+      "reason": "not_assigned_recognition_skipped",
+      "reason_description": "未被几何匹配选中，跳过文字识别"
+    }
+  ],
+  "input_results": {
+    "knobs": {
+      "count": 2,
+      "detections": [
+        {
+          "id": 0,
+          "confidence": 0.40592342615127563,
+          "bbox_xyxy": [
+            676.8803,
+            155.9019,
+            859.8506,
+            346.255
+          ],
+          "center_xy": [
+            768.3654,
+            251.0785
+          ],
+          "class_id": 0,
+          "class_name": "knob"
+        },
+        {
+          "id": 1,
+          "confidence": 0.9327493906021118,
+          "bbox_xyxy": [
+            496.7831,
+            909.019,
+            683.343,
+            1145.4126
+          ],
+          "center_xy": [
+            590.063,
+            1027.2158
+          ],
+          "class_id": 0,
+          "class_name": "knob"
+        }
+      ]
+    },
+    "ocr": {
+      "count": 19,
+      "text_regions": [
+        {
+          "id": 0,
+          "confidence": null,
+          "bbox_xyxy": [
+            1526,
+            33,
+            1621,
+            97
+          ],
+          "center_xy": [
+            1573.5,
+            65
+          ],
+          "type": "text_region",
+          "text": null,
+          "recognition_attempted": false,
+          "recognition_status": "not_requested",
+          "recognition_error": null,
+          "polygon": [
+            [
+              1529,
+              33
+            ],
+            [
+              1621,
+              38
+            ],
+            [
+              1618,
+              97
+            ],
+            [
+              1526,
+              92
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "confidence": null,
+          "bbox_xyxy": [
+            697,
+            196,
+            737,
+            222
+          ],
+          "center_xy": [
+            717,
+            209
+          ],
+          "type": "text_region",
+          "text": null,
+          "recognition_attempted": false,
+          "recognition_status": "not_requested",
+          "recognition_error": null,
+          "polygon": [
+            [
+              697,
+              196
+            ],
+            [
+              737,
+              196
+            ],
+            [
+              737,
+              222
+            ],
+            [
+              697,
+              222
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "confidence": null,
+          "bbox_xyxy": [
+            867,
+            190,
+            930,
+            314
+          ],
+          "center_xy": [
+            898.5,
+            252
+          ],
+          "type": "text_region",
+          "text": null,
+          "recognition_attempted": false,
+          "recognition_status": "not_requested",
+          "recognition_error": null,
+          "polygon": [
+            [
+              867,
+              190
+            ],
+            [
+              930,
+              190
+            ],
+            [
+              930,
+              314
+            ],
+            [
+              867,
+              314
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "confidence": null,
+          "bbox_xyxy": [
+            806,
+            202,
+            842,
+            227
+          ],
+          "center_xy": [
+            824,
+            214.5
+          ],
+          "type": "text_region",
+          "text": null,
+          "recognition_attempted": false,
+          "recognition_status": "not_requested",
+          "recognition_error": null,
+          "polygon": [
+            [
+              806,
+              202
+            ],
+            [
+              842,
+              202
+            ],
+            [
+              842,
+              227
+            ],
+            [
+              806,
+              227
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "confidence": null,
+          "bbox_xyxy": [
+            1159,
+            217,
+            1193,
+            239
+          ],
+          "center_xy": [
+            1176,
+            228
+          ],
+          "type": "text_region",
+          "text": null,
+          "recognition_attempted": false,
+          "recognition_status": "not_requested",
+          "recognition_error": null,
+          "polygon": [
+            [
+              1159,
+              217
+            ],
+            [
+              1193,
+              217
+            ],
+            [
+              1193,
+              239
+            ],
+            [
+              1159,
+              239
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "confidence": null,
+          "bbox_xyxy": [
+            1314,
+            210,
+            1375,
+            331
+          ],
+          "center_xy": [
+            1344.5,
+            270.5
+          ],
+          "type": "text_region",
+          "text": null,
+          "recognition_attempted": false,
+          "recognition_status": "not_requested",
+          "recognition_error": null,
+          "polygon": [
+            [
+              1314,
+              210
+            ],
+            [
+              1375,
+              210
+            ],
+            [
+              1375,
+              331
+            ],
+            [
+              1314,
+              331
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "confidence": 0.9866354703903198,
+          "bbox_xyxy": [
+            708,
+            372,
+            834,
+            401
+          ],
+          "center_xy": [
+            771,
+            386.5
+          ],
+          "type": "text_region",
+          "text": "1KK49F41刀闸",
+          "recognition_attempted": true,
+          "recognition_status": "recognized",
+          "recognition_error": null,
+          "polygon": [
+            [
+              709,
+              372
+            ],
+            [
+              834,
+              377
+            ],
+            [
+              833,
+              401
+            ],
+            [
+              708,
+              396
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "confidence": null,
+          "bbox_xyxy": [
+            689,
+            390,
+            850,
+            422
+          ],
+          "center_xy": [
+            769.75,
+            406
+          ],
+          "type": "text_region",
+          "text": null,
+          "recognition_attempted": false,
+          "recognition_status": "not_requested",
+          "recognition_error": null,
+          "polygon": [
+            [
+              690,
+              390
+            ],
+            [
+              850,
+              396
+            ],
+            [
+              850,
+              422
+            ],
+            [
+              689,
+              416
+            ]
+          ]
+        },
+        {
+          "id": 8,
+          "confidence": null,
+          "bbox_xyxy": [
+            1160,
+            391,
+            1287,
+            417
+          ],
+          "center_xy": [
+            1223.5,
+            403.75
+          ],
+          "type": "text_region",
+          "text": null,
+          "recognition_attempted": false,
+          "recognition_status": "not_requested",
+          "recognition_error": null,
+          "polygon": [
+            [
+              1161,
+              391
+            ],
+            [
+              1287,
+              393
+            ],
+            [
+              1286,
+              417
+            ],
+            [
+              1160,
+              414
+            ]
+          ]
+        },
+        {
+          "id": 9,
+          "confidence": null,
+          "bbox_xyxy": [
+            1144,
+            409,
+            1304,
+            437
+          ],
+          "center_xy": [
+            1224,
+            423
+          ],
+          "type": "text_region",
+          "text": null,
+          "recognition_attempted": false,
+          "recognition_status": "not_requested",
+          "recognition_error": null,
+          "polygon": [
+            [
+              1145,
+              409
+            ],
+            [
+              1304,
+              410
+            ],
+            [
+              1303,
+              437
+            ],
+            [
+              1144,
+              436
+            ]
+          ]
+        },
+        {
+          "id": 10,
+          "confidence": null,
+          "bbox_xyxy": [
+            788,
+            448,
+            891,
+            520
+          ],
+          "center_xy": [
+            839.5,
+            484
+          ],
+          "type": "text_region",
+          "text": null,
+          "recognition_attempted": false,
+          "recognition_status": "not_requested",
+          "recognition_error": null,
+          "polygon": [
+            [
+              788,
+              448
+            ],
+            [
+              891,
+              448
+            ],
+            [
+              891,
+              520
+            ],
+            [
+              788,
+              520
+            ]
+          ]
+        },
+        {
+          "id": 11,
+          "confidence": null,
+          "bbox_xyxy": [
+            1238,
+            463,
+            1349,
+            535
+          ],
+          "center_xy": [
+            1293.5,
+            499
+          ],
+          "type": "text_region",
+          "text": null,
+          "recognition_attempted": false,
+          "recognition_status": "not_requested",
+          "recognition_error": null,
+          "polygon": [
+            [
+              1238,
+              463
+            ],
+            [
+              1349,
+              463
+            ],
+            [
+              1349,
+              535
+            ],
+            [
+              1238,
+              535
+            ]
+          ]
+        },
+        {
+          "id": 12,
+          "confidence": null,
+          "bbox_xyxy": [
+            699,
+            906,
+            763,
+            1039
+          ],
+          "center_xy": [
+            731,
+            972.5
+          ],
+          "type": "text_region",
+          "text": null,
+          "recognition_attempted": false,
+          "recognition_status": "not_requested",
+          "recognition_error": null,
+          "polygon": [
+            [
+              699,
+              906
+            ],
+            [
+              763,
+              906
+            ],
+            [
+              763,
+              1039
+            ],
+            [
+              699,
+              1039
+            ]
+          ]
+        },
+        {
+          "id": 13,
+          "confidence": null,
+          "bbox_xyxy": [
+            632,
+            938,
+            668,
+            964
+          ],
+          "center_xy": [
+            650,
+            951
+          ],
+          "type": "text_region",
+          "text": null,
+          "recognition_attempted": false,
+          "recognition_status": "not_requested",
+          "recognition_error": null,
+          "polygon": [
+            [
+              632,
+              938
+            ],
+            [
+              668,
+              938
+            ],
+            [
+              668,
+              964
+            ],
+            [
+              632,
+              964
+            ]
+          ]
+        },
+        {
+          "id": 14,
+          "confidence": null,
+          "bbox_xyxy": [
+            899,
+            996,
+            1044,
+            1075
+          ],
+          "center_xy": [
+            971.5,
+            1035.5
+          ],
+          "type": "text_region",
+          "text": null,
+          "recognition_attempted": false,
+          "recognition_status": "not_requested",
+          "recognition_error": null,
+          "polygon": [
+            [
+              901,
+              996
+            ],
+            [
+              1044,
+              1000
+            ],
+            [
+              1042,
+              1075
+            ],
+            [
+              899,
+              1071
+            ]
+          ]
+        },
+        {
+          "id": 15,
+          "confidence": 0.9656021378257058,
+          "bbox_xyxy": [
+            523,
+            1099,
+            664,
+            1123
+          ],
+          "center_xy": [
+            593.25,
+            1111
+          ],
+          "type": "text_region",
+          "text": "4KK49F410地刀",
+          "recognition_attempted": true,
+          "recognition_status": "recognized",
+          "recognition_error": null,
+          "polygon": [
+            [
+              523,
+              1099
+            ],
+            [
+              664,
+              1101
+            ],
+            [
+              663,
+              1123
+            ],
+            [
+              523,
+              1121
+            ]
+          ]
+        },
+        {
+          "id": 16,
+          "confidence": null,
+          "bbox_xyxy": [
+            512,
+            1118,
+            676,
+            1144
+          ],
+          "center_xy": [
+            594,
+            1131
+          ],
+          "type": "text_region",
+          "text": null,
+          "recognition_attempted": false,
+          "recognition_status": "not_requested",
+          "recognition_error": null,
+          "polygon": [
+            [
+              512,
+              1118
+            ],
+            [
+              676,
+              1120
+            ],
+            [
+              676,
+              1144
+            ],
+            [
+              512,
+              1142
+            ]
+          ]
+        },
+        {
+          "id": 17,
+          "confidence": null,
+          "bbox_xyxy": [
+            267,
+            1130,
+            435,
+            1210
+          ],
+          "center_xy": [
+            351,
+            1170
+          ],
+          "type": "text_region",
+          "text": null,
+          "recognition_attempted": false,
+          "recognition_status": "not_requested",
+          "recognition_error": null,
+          "polygon": [
+            [
+              270,
+              1130
+            ],
+            [
+              435,
+              1137
+            ],
+            [
+              432,
+              1210
+            ],
+            [
+              267,
+              1203
+            ]
+          ]
+        },
+        {
+          "id": 18,
+          "confidence": null,
+          "bbox_xyxy": [
+            603,
+            1143,
+            765,
+            1220
+          ],
+          "center_xy": [
+            684,
+            1181.5
+          ],
+          "type": "text_region",
+          "text": null,
+          "recognition_attempted": false,
+          "recognition_status": "not_requested",
+          "recognition_error": null,
+          "polygon": [
+            [
+              605,
+              1143
+            ],
+            [
+              765,
+              1148
+            ],
+            [
+              763,
+              1220
+            ],
+            [
+              603,
+              1215
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "video": {
+    "frame_id": 1,
+    "session_id": 1,
+    "camera_timestamp_ns": 123,
+    "received_monotonic_ns": 545001851960,
+    "processing_ms": 3741.3621,
+    "receive_to_ui_submission_ms": 2000,
+    "sensor_frame_width": 1706,
+    "sensor_frame_height": 1279,
+    "rotation_degrees": 0,
+    "backpressure_strategy": "KEEP_ONLY_LATEST",
+    "max_concurrent_inferences": 1,
+    "result_overlay_target": "processed_frame"
+  }
+}

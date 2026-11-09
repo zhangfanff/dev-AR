@@ -1,0 +1,27 @@
+# Android 缓存、构建产物和本机配置
+.gradle/
+build/
+local.properties
+*.iml
+*.apk
+*.aab
+*.jks
+*.keystore
+
+# Unity 缓存和构建产物
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Bb]uilds/
+
+# Python 缓存和虚拟环境
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 本地敏感配置
+.env
+*.onnx

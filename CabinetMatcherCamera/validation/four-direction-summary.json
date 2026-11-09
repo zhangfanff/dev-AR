@@ -1,0 +1,62 @@
+[
+  {
+    "Ocr": "V4",
+    "Mode": "SINGLE",
+    "Execution": "SERIAL",
+    "Raw": 19,
+    "Merged": 19,
+    "Matches": 3,
+    "Recognized": 3,
+    "Texts": "合闸/分闸转换把手 / 合闸/分闸转换把手 / 2KK49F42刀闸"
+  },
+  {
+    "Ocr": "V4",
+    "Mode": "FOUR_DIRECTIONS",
+    "Execution": "SERIAL",
+    "Raw": 82,
+    "Merged": 34,
+    "Matches": 3,
+    "Recognized": 3,
+    "Texts": "合闸/分闸转换把手 / 合闸/分闸转换把手 / 2KK49F42刀闸"
+  },
+  {
+    "Ocr": "V4",
+    "Mode": "FOUR_DIRECTIONS",
+    "Execution": "PARALLEL",
+    "Raw": 82,
+    "Merged": 34,
+    "Matches": 3,
+    "Recognized": 3,
+    "Texts": "合闸/分闸转换把手 / 合闸/分闸转换把手 / 2KK49F42刀闸"
+  },
+  {
+    "Ocr": "ML_KIT_CHINESE",
+    "Mode": "SINGLE",
+    "Execution": "SERIAL",
+    "Raw": 16,
+    "Merged": 16,
+    "Matches": 3,
+    "Recognized": 0,
+    "Texts": "合闻/分闸转换把手 / 合闸/分转换把手 / 2KK 491F42丁国"
+  },
+  {
+    "Ocr": "ML_KIT_CHINESE",
+    "Mode": "FOUR_DIRECTIONS",
+    "Execution": "SERIAL",
+    "Raw": 67,
+    "Merged": 19,
+    "Matches": 3,
+    "Recognized": 2,
+    "Texts": "合闸/分闻转換把手 / |合阐/分阐转换把手 / | 2KK 49F42刀闸"
+  },
+  {
+    "Ocr": "ML_KIT_CHINESE",
+    "Mode": "FOUR_DIRECTIONS",
+    "Execution": "PARALLEL",
+    "Raw": 67,
+    "Merged": 19,
+    "Matches": 3,
+    "Recognized": 2,
+    "Texts": "合闸/分闻转換把手 / |合阐/分阐转换把手 / | 2KK 49F42刀闸"
+  }
+]
